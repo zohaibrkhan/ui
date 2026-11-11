@@ -1,15 +1,55 @@
 {
   "version": 1,
   "counts": {
-    "entries": 29,
-    "patterns": 1,
+    "entries": 41,
+    "patterns": 9,
     "tools": 2
   },
   "patterns": [
     {
+      "id": "editorial-serif-display",
+      "title": "Editorial serif display",
+      "path": "patterns/editorial-serif-display.md"
+    },
+    {
       "id": "evergrid-design-system",
       "title": "Evergrid design system",
       "path": "patterns/evergrid-design-system.md"
+    },
+    {
+      "id": "offscreen-loop-gating",
+      "title": "Offscreen loop gating",
+      "path": "patterns/offscreen-loop-gating.md"
+    },
+    {
+      "id": "play-then-scroll-completes",
+      "title": "Play, then scroll completes",
+      "path": "patterns/play-then-scroll-completes.md"
+    },
+    {
+      "id": "pointer-tracking",
+      "title": "Pointer tracking",
+      "path": "patterns/pointer-tracking.md"
+    },
+    {
+      "id": "reduced-motion-state-snap",
+      "title": "Reduced-motion state snap",
+      "path": "patterns/reduced-motion-state-snap.md"
+    },
+    {
+      "id": "scroll-pinned-story",
+      "title": "Scroll-pinned story",
+      "path": "patterns/scroll-pinned-story.md"
+    },
+    {
+      "id": "scroll-scrubbed-animation",
+      "title": "Scroll-scrubbed animation",
+      "path": "patterns/scroll-scrubbed-animation.md"
+    },
+    {
+      "id": "smooth-scroll",
+      "title": "Smooth scroll",
+      "path": "patterns/smooth-scroll.md"
     }
   ],
   "tools": [
@@ -35,7 +75,7 @@
       "origin": "Studio Original",
       "access": "free-with-account",
       "theme": "light",
-      "summary": "A fogged greenhouse window you wipe clear with the pointer; scrolling drags a squeegee down the glass, then pushes through the frame into the sharp photo behind it.",
+      "summary": "A fogged window over a photograph that the pointer wipes clear; scrolling completes the wipe, then pushes through the window frame into the sharp image and a closing headline.",
       "tags": [
         "botanical",
         "photographic",
@@ -70,7 +110,13 @@
       ],
       "complexity": "high",
       "path": "sources/oversight-supply/sections/condensation.md",
-      "patterns": [],
+      "patterns": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "pointer-tracking",
+        "smooth-scroll",
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -117,7 +163,12 @@
       ],
       "complexity": "high",
       "path": "sources/oversight-supply/sections/cyanotype.md",
-      "patterns": [],
+      "patterns": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "smooth-scroll",
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -152,7 +203,9 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/evergrid-about-us-features-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -186,7 +239,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-about-us-features-02.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -221,7 +276,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-about-us-other-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -254,7 +311,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-about-us-team-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -287,7 +346,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-blog-blog-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -321,7 +382,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-blog-hero-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -356,7 +419,9 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/evergrid-case-studies-use-cases-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -391,7 +456,9 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/evergrid-contact-contact-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -426,7 +493,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-home-cta-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -460,7 +529,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-home-faq-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -495,7 +566,9 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/evergrid-home-features-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -527,7 +600,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-home-features-02.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -560,7 +635,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-home-footer-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -593,7 +670,9 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/evergrid-home-hero-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -655,7 +734,9 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/evergrid-home-product-showcase-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -687,7 +768,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-home-use-cases-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -720,7 +803,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-pricing-pricing-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -753,7 +838,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-product-features-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -786,7 +873,9 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/evergrid-product-hero-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -819,7 +908,9 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-product-how-it-works-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -852,7 +943,9 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/evergrid-product-integrations-01.md",
-      "patterns": [],
+      "patterns": [
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -864,7 +957,7 @@
       "kind": "scroll-story",
       "origin": "Studio Original",
       "access": "free-with-account",
-      "theme": "mixed",
+      "theme": "light",
       "summary": "A pinned horizontal filmstrip of ten photo plates: vertical scroll slides the strip, the centred plate swells, a big clock ticks through the day, and the last plate expands to a full-bleed finale.",
       "tags": [
         "editorial",
@@ -897,7 +990,12 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/florilegium.md",
-      "patterns": [],
+      "patterns": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "smooth-scroll",
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -909,7 +1007,7 @@
       "kind": "scroll-story",
       "origin": "Studio Original",
       "access": "free-with-account",
-      "theme": "mixed",
+      "theme": "light",
       "summary": "A desk of twelve throwable, flippable specimen cards that scroll sorts from a loose pile into a tidy index grid, then zooms one card to a full-bleed closing image.",
       "tags": [
         "botanical",
@@ -943,7 +1041,12 @@
       ],
       "complexity": "high",
       "path": "sources/oversight-supply/sections/herbarium.md",
-      "patterns": [],
+      "patterns": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "smooth-scroll",
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -955,7 +1058,7 @@
       "kind": "scroll-story",
       "origin": "Studio Original",
       "access": "free-with-account",
-      "theme": "mixed",
+      "theme": "light",
       "summary": "One photograph shown as a photo-joiner collage of dozens of misregistered prints that react to the pointer and can be re-shot by clicking; scroll aligns them into a seamless image that fills the screen.",
       "tags": [
         "photography",
@@ -990,7 +1093,13 @@
       ],
       "complexity": "high",
       "path": "sources/oversight-supply/sections/joiner.md",
-      "patterns": [],
+      "patterns": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "pointer-tracking",
+        "smooth-scroll",
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -1039,7 +1148,13 @@
       ],
       "complexity": "high",
       "path": "sources/oversight-supply/sections/phototropism.md",
-      "patterns": [],
+      "patterns": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "pointer-tracking",
+        "smooth-scroll",
+        "editorial-serif-display"
+      ],
       "has_original": false
     },
     {
@@ -1093,7 +1208,580 @@
       ],
       "complexity": "high",
       "path": "sources/oversight-supply/sections/pigment.md",
+      "patterns": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "pointer-tracking",
+        "smooth-scroll",
+        "editorial-serif-display"
+      ],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/portfolio-collage",
+      "name": "Collage",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/portfolio-collage",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=portfolio-collage",
+      "kind": "portfolio-hero",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Photographer portfolio hero as an endless, draggable table of prints: category labels are tied to their photos by live hairlines, a switch re-flows scatter into a filmstrip, and thumbnails fly into a lightbox.",
+      "tags": [
+        "portfolio",
+        "photography",
+        "editorial",
+        "minimal",
+        "gallery",
+        "infinite-canvas",
+        "warm-neutral"
+      ],
+      "techniques": [
+        "draggable-elements",
+        "image-collage",
+        "infinite-wrap-canvas",
+        "pointer-tracking",
+        "parallax-layers",
+        "flip-lightbox",
+        "svg-connector-lines",
+        "layout-mode-morph",
+        "inertia-drag"
+      ],
+      "stack": [
+        "react",
+        "css",
+        "svg",
+        "web-animations-api"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/portfolio-collage.md",
+      "patterns": [
+        "pointer-tracking"
+      ],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/portfolio-folio",
+      "name": "Folio",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/portfolio-folio",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=portfolio-folio",
+      "kind": "portfolio-hero",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Writer-illustrator portfolio hero staged as a small printed magazine: a 3D book whose pages bend and cast shadows as you drag, click or key through cover, contents, essay, work, press and contact spreads.",
+      "tags": [
+        "portfolio",
+        "editorial",
+        "magazine",
+        "skeuomorphic",
+        "serif",
+        "two-colour",
+        "book"
+      ],
+      "techniques": [
+        "page-flip-3d",
+        "draggable-elements",
+        "editorial-serif-display",
+        "container-query-units",
+        "spring-physics",
+        "scroll-snap-carousel",
+        "form-with-validation",
+        "tabs-with-preview"
+      ],
+      "stack": [
+        "react",
+        "css",
+        "css-3d-transforms",
+        "container-queries"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/portfolio-folio.md",
+      "patterns": [
+        "editorial-serif-display"
+      ],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/portfolio-vinyl",
+      "name": "Vinyl",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/portfolio-vinyl",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=portfolio-vinyl",
+      "kind": "portfolio-hero",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "Musician portfolio hero built around a CSS turntable: pressing play slides the record out of its sleeve, drops the tonearm and starts a generated beat with a radial spectrum; the disc can be scratched by hand.",
+      "tags": [
+        "portfolio",
+        "music",
+        "skeuomorphic",
+        "dark",
+        "audio",
+        "album-launch",
+        "turntable"
+      ],
+      "techniques": [
+        "interactive-demo-in-hero",
+        "draggable-elements",
+        "audio-reactive-visual",
+        "web-audio-synthesis",
+        "canvas-2d-particles",
+        "css-skeuomorphism",
+        "glassmorphism",
+        "oversized-type",
+        "copy-to-clipboard"
+      ],
+      "stack": [
+        "react",
+        "css",
+        "canvas",
+        "web-audio",
+        "svg"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/portfolio-vinyl.md",
       "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/pricing-choice",
+      "name": "Choice",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/pricing-choice",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=pricing-choice",
+      "kind": "pricing",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "Pricing as a mobile checkout sheet: three radio plan cards where the chosen one unfolds, a monthly/yearly segmented control, a seat stepper, and a 'due today' total whose digits roll like an odometer.",
+      "tags": [
+        "pricing",
+        "dark",
+        "mobile-first",
+        "checkout",
+        "aurora",
+        "app-like",
+        "single-column"
+      ],
+      "techniques": [
+        "pricing-toggle",
+        "pricing-calculator",
+        "rolling-number",
+        "accordion",
+        "glassmorphism",
+        "gradient-mesh",
+        "grain-texture",
+        "grid-rows-height-animation",
+        "segmented-control",
+        "live-region-summary"
+      ],
+      "stack": [
+        "react",
+        "css",
+        "svg",
+        "web-animations-api"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/pricing-choice.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/pricing-license",
+      "name": "License",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/pricing-license",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=pricing-license",
+      "kind": "pricing",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "One-time licence pricing driven by a single 'active users' stepper: three nested cards re-price with rolling digits, mark which tier fits best, and disable tiers the team has outgrown.",
+      "tags": [
+        "pricing",
+        "light",
+        "one-time-payment",
+        "licence",
+        "three-tier",
+        "soft-ui",
+        "calculator"
+      ],
+      "techniques": [
+        "pricing-calculator",
+        "rolling-number",
+        "best-fit-recommendation",
+        "form-with-validation",
+        "accordion",
+        "grid-rows-height-animation",
+        "pointer-tracking",
+        "grain-texture",
+        "live-region-summary",
+        "animated-gradient-border"
+      ],
+      "stack": [
+        "react",
+        "css",
+        "svg",
+        "web-animations-api"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/pricing-license.md",
+      "patterns": [
+        "pointer-tracking"
+      ],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/pricing-studio",
+      "name": "Studio",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/pricing-studio",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=pricing-studio",
+      "kind": "pricing",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Service-studio pricing in a bento of three offers with live capacity: a row of spot dots fills when you reserve, flips to a waitlist when full, and can be undone; billing toggle and add-on switch roll the prices.",
+      "tags": [
+        "pricing",
+        "light",
+        "agency",
+        "productized-service",
+        "bento",
+        "scarcity",
+        "oversized-type"
+      ],
+      "techniques": [
+        "pricing-toggle",
+        "bento-grid",
+        "rolling-number",
+        "availability-indicator",
+        "optimistic-action-with-undo",
+        "oversized-type",
+        "testimonial-cards",
+        "segmented-control",
+        "grain-texture",
+        "gradient-mesh",
+        "live-region-summary"
+      ],
+      "stack": [
+        "react",
+        "css",
+        "svg",
+        "web-animations-api"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/pricing-studio.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/prompt-horizon",
+      "name": "Horizon",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/prompt-horizon",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=prompt-horizon",
+      "kind": "hero",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "Cinematic prompt-box hero for a forecasting product: type a question or drop a CSV and the headline shrinks while a history line and an amber forecast band draw along the bottom of a sunrise photo.",
+      "tags": [
+        "cinematic",
+        "ai-product",
+        "data",
+        "forecasting",
+        "prompt-box",
+        "photo-background",
+        "mono-labels"
+      ],
+      "techniques": [
+        "interactive-demo-in-hero",
+        "svg-line-drawing",
+        "glassmorphism",
+        "parallax-layers",
+        "pointer-tracking",
+        "mono-label-accents",
+        "typewriter-placeholder",
+        "file-drop-zone",
+        "stat-counters",
+        "perspective-grid-floor",
+        "hero-state-machine"
+      ],
+      "stack": [
+        "react",
+        "css",
+        "svg"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/prompt-horizon.md",
+      "patterns": [
+        "pointer-tracking"
+      ],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/prompt-murmur",
+      "name": "Murmur",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/prompt-murmur",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=prompt-murmur",
+      "kind": "hero",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "Voice-assistant hero centred on a WebGL orb whose surface, glow and colour follow a listen / think / speak cycle driven by the microphone, with a clearly labelled scripted fallback.",
+      "tags": [
+        "ai-product",
+        "voice",
+        "webgl",
+        "orb",
+        "dark",
+        "centered",
+        "audio-reactive"
+      ],
+      "techniques": [
+        "three-js-scene",
+        "webgl-shader-background",
+        "interactive-demo-in-hero",
+        "audio-reactive-visual",
+        "voice-state-machine",
+        "pointer-tracking",
+        "accent-theme-switching",
+        "graceful-capability-fallback"
+      ],
+      "stack": [
+        "react",
+        "three.js",
+        "glsl",
+        "web-audio",
+        "web-speech",
+        "css"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/prompt-murmur.md",
+      "patterns": [
+        "pointer-tracking"
+      ],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/prompt-parlor",
+      "name": "Parlor",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/prompt-parlor",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=prompt-parlor",
+      "kind": "hero",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Character-chat hero: three illustrated faces act as a radio group that re-themes the page, beside a working scripted chat window that lets visitors try the product before signing up.",
+      "tags": [
+        "playful",
+        "chat-ui",
+        "neo-brutalist",
+        "ai-product",
+        "mascots",
+        "interactive-demo"
+      ],
+      "techniques": [
+        "interactive-demo-in-hero",
+        "hard-offset-shadows",
+        "pointer-tracking",
+        "accent-theme-switching",
+        "scripted-chat-demo",
+        "svg-character-faces",
+        "emoji-burst"
+      ],
+      "stack": [
+        "react",
+        "css",
+        "svg"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/prompt-parlor.md",
+      "patterns": [
+        "pointer-tracking"
+      ],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/rootsong",
+      "name": "Rootsong",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/rootsong",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=rootsong",
+      "kind": "scroll-story",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "A flower drawn entirely from small words on a 2D canvas; scroll opens the bloom, scatters the words upward and re-forms them into one large word, while a form lets visitors plant their own phrase.",
+      "tags": [
+        "typographic",
+        "generative",
+        "poetic",
+        "interactive",
+        "dark",
+        "botanical",
+        "atmospheric"
+      ],
+      "techniques": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "canvas-2d-particles",
+        "text-particles",
+        "particle-morph-to-text",
+        "pointer-tracking",
+        "pointer-repulsion",
+        "form-with-validation",
+        "user-generated-content",
+        "gradient-mesh",
+        "grain-texture",
+        "stat-counters",
+        "smooth-scroll",
+        "editorial-serif-display",
+        "mono-label-accents",
+        "split-text-animation"
+      ],
+      "stack": [
+        "react",
+        "gsap",
+        "scrolltrigger",
+        "lenis",
+        "canvas",
+        "css",
+        "localstorage"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/rootsong.md",
+      "patterns": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "pointer-tracking",
+        "smooth-scroll",
+        "editorial-serif-display"
+      ],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/signal",
+      "name": "Signal & Soil",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/signal",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=signal",
+      "kind": "scroll-story",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "Glowing monospace glyphs form a horse, then poppies, then a wordmark over blurred pastoral photos; the pointer scatters them, and at the end they lift away as the last photo snaps into focus.",
+      "tags": [
+        "ascii",
+        "photographic",
+        "pastoral",
+        "interactive",
+        "cinematic",
+        "typographic",
+        "dark"
+      ],
+      "techniques": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "canvas-2d-particles",
+        "ascii-glyph-rendering",
+        "image-to-particles",
+        "particle-morph-between-shapes",
+        "glyph-atlas",
+        "pointer-tracking",
+        "pointer-repulsion",
+        "background-crossfade",
+        "blur-to-focus-reveal",
+        "stat-counters",
+        "smooth-scroll",
+        "editorial-serif-display",
+        "mono-label-accents",
+        "grain-texture",
+        "split-text-animation"
+      ],
+      "stack": [
+        "react",
+        "gsap",
+        "scrolltrigger",
+        "lenis",
+        "canvas",
+        "css"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/signal.md",
+      "patterns": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "pointer-tracking",
+        "smooth-scroll",
+        "editorial-serif-display"
+      ],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/transmission",
+      "name": "Transmission",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/transmission",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=transmission",
+      "kind": "scroll-story",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "A ray-marched 3D lily shown as live ASCII on black; the pointer opens a circular lens onto the true render, and scroll refines the characters, blooms and tilts the flower, then decodes the whole screen.",
+      "tags": [
+        "ascii",
+        "3d",
+        "generative",
+        "terminal",
+        "dark",
+        "interactive",
+        "webgl",
+        "botanical"
+      ],
+      "techniques": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "webgl-shader-background",
+        "three-js-scene",
+        "raymarched-sdf",
+        "ascii-post-process",
+        "glyph-atlas",
+        "pointer-lens-reveal",
+        "pointer-tracking",
+        "adaptive-resolution",
+        "smooth-scroll",
+        "editorial-serif-display",
+        "mono-label-accents",
+        "split-text-animation"
+      ],
+      "stack": [
+        "react",
+        "three",
+        "webgl",
+        "glsl",
+        "gsap",
+        "scrolltrigger",
+        "lenis",
+        "canvas",
+        "css"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/transmission.md",
+      "patterns": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "pointer-tracking",
+        "smooth-scroll",
+        "editorial-serif-display"
+      ],
       "has_original": false
     }
   ]

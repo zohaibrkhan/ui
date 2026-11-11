@@ -1,7 +1,7 @@
 # Editorial serif display
 
 A serif face for headlines against a quiet sans for body and interface text, often with a monospace
-for small labels. It is the most common trait in the catalog (32 of the entries so far), across both
+for small labels. It is the most common trait in the catalog (32 of the 41 entries), across both
 the scroll stories and the Evergrid template.
 
 ## The recipe as observed

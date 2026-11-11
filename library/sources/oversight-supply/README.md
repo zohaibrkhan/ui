@@ -11,6 +11,17 @@ system, the motion, the techniques worth reusing, and an original build brief fo
 in the same pattern. Everything here was written from studying the **public** pages: the listing, each
 section's detail page, and its live interactive preview.
 
+## How much evidence each entry rests on
+
+| Entries | Basis | What that means |
+| --- | --- | --- |
+| 19 Studio Originals (scroll stories, heroes, portfolio heroes, pricing) | Live public preview, exercised in a headless browser at desktop and phone widths and with reduced motion | Layout, type, colour, motion and interaction were observed. Each entry lists what could not be verified (for example audio, microphone input and form submission) |
+| 22 `evergrid-*` template sections | One static public thumbnail each, plus the detail page text | Layout and colour are read from a screenshot, so sizes are estimates. Motion, hover states and mobile layouts are marked "not determined". Their live preview is served from a path the site's robots.txt disallows, so it was not used |
+
+Entries are written at pattern level. They describe what a visitor can observe and the approach behind
+it; they leave out implementation constants, and each build brief uses placeholder subject matter
+rather than the vendor's concept.
+
 ## What is not in this folder, and why
 
 The site's actual deliverable for each section is a "prompt + source code" block. It is free, but it is
