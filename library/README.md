@@ -81,7 +81,7 @@ parsing those tools would share.
 
 | Source | Entries | Notes |
 | --- | --- | --- |
-| [oversight-supply](sources/oversight-supply/README.md) | 41 | Free sections from Oversight Supply. Analysis and original briefs only; originals are account-gated |
+| [oversight-supply](sources/oversight-supply/README.md) | 41 | Free sections from Oversight Supply. Analysis and original briefs, plus vendor originals for the 25 worth keeping in `vault/` |
 
 ## Tools
 

@@ -50,8 +50,15 @@ public repository.
 
 ## Originals on file
 
-15 of 41 as of 2026-11-11: `condensation`, `cyanotype`, `evergrid-home-product-showcase-01`,
-`florilegium`, `herbarium`, `joiner`, `portfolio-collage`, `portfolio-vinyl`, `pricing-choice`,
-`pricing-studio`, `prompt-horizon`, `prompt-parlor`, `rootsong`, `signal`, `transmission`.
+25 of 41 as of 2026-11-11. All 19 Studio Originals: `condensation`, `cyanotype`, `florilegium`,
+`herbarium`, `joiner`, `phototropism`, `pigment`, `portfolio-collage`, `portfolio-folio`,
+`portfolio-vinyl`, `pricing-choice`, `pricing-license`, `pricing-studio`, `prompt-horizon`,
+`prompt-murmur`, `prompt-parlor`, `rootsong`, `signal`, `transmission`. Six Evergrid sections:
+`evergrid-about-us-team-01`, `evergrid-case-studies-use-cases-01`, `evergrid-home-hero-01`,
+`evergrid-home-product-showcase-01`, `evergrid-home-use-cases-01`, `evergrid-product-integrations-01`.
 
-List what is still missing with `node library/scripts/find.mjs --original no`.
+The other 16 Evergrid sections were left out on purpose: the owner judged them not good examples.
+Their entries remain for completeness but rank below the ones with originals; do not chase their
+originals. Prefer `node library/scripts/find.mjs --original yes` when looking for references.
+
+List the ones without an original with `node library/scripts/find.mjs --original no`.

@@ -350,7 +350,7 @@
       "patterns": [
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/evergrid-blog-blog-01",
@@ -458,7 +458,7 @@
       "patterns": [
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/evergrid-contact-contact-01",
@@ -709,7 +709,7 @@
       "patterns": [
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/evergrid-home-navigation-01",
@@ -807,7 +807,7 @@
       "patterns": [
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/evergrid-pricing-pricing-01",
@@ -982,7 +982,7 @@
       "patterns": [
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/florilegium",
@@ -1192,7 +1192,7 @@
         "smooth-scroll",
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/pigment",
@@ -1252,7 +1252,7 @@
         "smooth-scroll",
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/portfolio-collage",
@@ -1341,7 +1341,7 @@
         "draggable-elements",
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/portfolio-vinyl",
@@ -1483,7 +1483,7 @@
         "pointer-tracking",
         "live-region-summary"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/pricing-studio",
@@ -1624,7 +1624,7 @@
         "pointer-tracking",
         "accent-theme-switching"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/prompt-parlor",
