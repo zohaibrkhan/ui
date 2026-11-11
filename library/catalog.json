@@ -152,7 +152,7 @@
         "smooth-scroll",
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/cyanotype",
@@ -205,7 +205,7 @@
         "smooth-scroll",
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/evergrid-about-us-features-01",
@@ -773,7 +773,7 @@
       "patterns": [
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/evergrid-home-use-cases-01",
@@ -1032,7 +1032,7 @@
         "smooth-scroll",
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/herbarium",
@@ -1084,7 +1084,7 @@
         "smooth-scroll",
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/joiner",
@@ -1137,7 +1137,7 @@
         "smooth-scroll",
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/phototropism",
@@ -1297,7 +1297,7 @@
         "draggable-elements",
         "pointer-tracking"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/portfolio-folio",
@@ -1388,7 +1388,7 @@
         "draggable-elements",
         "audio-reactive-visual"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/pricing-choice",
@@ -1435,7 +1435,7 @@
         "grid-rows-height-animation",
         "live-region-summary"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/pricing-license",
@@ -1530,7 +1530,7 @@
         "rolling-number",
         "live-region-summary"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/prompt-horizon",
@@ -1576,7 +1576,7 @@
         "interactive-demo-in-hero",
         "pointer-tracking"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/prompt-murmur",
@@ -1666,7 +1666,7 @@
         "pointer-tracking",
         "accent-theme-switching"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/rootsong",
@@ -1724,7 +1724,7 @@
         "smooth-scroll",
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/signal",
@@ -1782,7 +1782,7 @@
         "smooth-scroll",
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     },
     {
       "id": "oversight-supply/transmission",
@@ -1841,7 +1841,7 @@
         "smooth-scroll",
         "editorial-serif-display"
       ],
-      "has_original": false
+      "has_original": true
     }
   ]
 }

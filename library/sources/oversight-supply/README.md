@@ -28,9 +28,11 @@ The site's actual deliverable for each section is a "prompt + source code" block
 released only to a signed-in account, and the site's terms say templates may be used "in your own or a
 client project" but may not be redistributed. So:
 
-- The vendor's prompts and source code are **not** committed here.
+- The vendor's prompts and source code are **not** in this folder. The ones copied from a signed-in
+  account live in `library/vault/oversight-supply/` (see below).
 - Entries describe techniques in our own words. Build briefs are original and use placeholder content.
-- No vendor screenshots, artwork, fonts or copy are stored in the repo.
+- No vendor screenshots, artwork or fonts are stored in the repo. Image files the originals refer to
+  are not saved either; each original lists where its images come from.
 
 ## Adding the originals for your own use
 
@@ -42,6 +44,14 @@ client project" but may not be redistributed. So:
    pbpaste | node library/scripts/import-section.mjs oversight-supply/<slug>
    ```
 
-That writes `library/vault/oversight-supply/<slug>/prompt.md`. `library/vault/` is gitignored, and the
-catalog marks the entry `has_original: true` on the machine where the file exists. Keep the vault out of
-any public repository.
+That writes `library/vault/oversight-supply/<slug>/prompt.md`, and the catalog marks the entry
+`has_original: true`. The vault is committed because this repository is private. Keep it out of any
+public repository.
+
+## Originals on file
+
+15 of 41 as of 2026-11-11: `condensation`, `cyanotype`, `evergrid-home-product-showcase-01`,
+`florilegium`, `herbarium`, `joiner`, `portfolio-collage`, `portfolio-vinyl`, `pricing-choice`,
+`pricing-studio`, `prompt-horizon`, `prompt-parlor`, `rootsong`, `signal`, `transmission`.
+
+List what is still missing with `node library/scripts/find.mjs --original no`.

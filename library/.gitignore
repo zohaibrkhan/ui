@@ -1,2 +1,2 @@
-# Originals copied from vendor sites while signed in. Licensed, not redistributable.
-vault/
+# vault/ is committed on purpose: this repository is private. If it is ever made public,
+# remove library/vault from the repo (and its history) first - the originals are not redistributable.

@@ -2,8 +2,9 @@
 // Files an original "prompt + code" that YOU copied while signed in to the source site.
 // Usage:  pbpaste | node library/scripts/import-section.mjs oversight-supply/prompt-parlor
 //         node library/scripts/import-section.mjs oversight-supply/prompt-parlor path/to/copied.txt
-// Writes library/vault/<source>/<slug>/prompt.md. The vault is gitignored: these files are
-// the vendor's licensed material and must not be redistributed (see sources/*/README.md).
+// Writes library/vault/<source>/<slug>/prompt.md. The vault holds the vendor's licensed material.
+// It is committed only because this repository is private; it must not be redistributed
+// (see sources/*/README.md).
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs"
 import { join } from "node:path"
 import { SOURCES, VAULT } from "./lib.mjs"

@@ -19,7 +19,7 @@ library/
   patterns/<slug>.md      Cross-cutting techniques that several entries share
   tools/<slug>.md         External tools and references worth reaching for (pointers, not mirrors)
   scripts/                build-catalog, find, import-section (plain Node, no dependencies)
-  vault/                  Gitignored. Licensed originals you imported for your own use
+  vault/                  Licensed originals (vendor prompt + code). Committed because this repo is private
 ```
 
 ## Using it
@@ -66,8 +66,9 @@ without a YAML library) and a fixed set of sections:
 
 - Entries are our own analysis and our own briefs. Third-party code, prompts, copy, images and fonts are
   committed only when their licence clearly allows redistribution, and the source README says so.
-- Licensed-but-not-redistributable originals go in `vault/` via `scripts/import-section.mjs` and stay
-  local.
+- Licensed-but-not-redistributable originals go in `vault/` via `scripts/import-section.mjs`. They are
+  committed because this repository is private. Before making the repository public, or exposing it
+  through a server other people can reach, remove `vault/` from the repo and its history.
 
 ## Toward an MCP server
 

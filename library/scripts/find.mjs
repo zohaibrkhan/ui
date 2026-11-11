@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Query the catalog. Usage:
-//   node library/scripts/find.mjs [text...] [--kind hero] [--tag dark] [--technique scroll-pinning] [--json]
+//   node library/scripts/find.mjs [text...] [--kind hero] [--tag dark] [--technique scroll-pinning] [--original yes|no] [--json]
 // This is the same lookup an MCP `search` tool would expose later.
 import { readFileSync } from "node:fs"
 import { join } from "node:path"
@@ -20,11 +20,15 @@ const hits = entries.filter((e) => {
   if (opt.tag && !has(e.tags, opt.tag)) return false
   if (opt.technique && !has(e.techniques, opt.technique)) return false
   if (opt.source && e.source !== opt.source) return false
+  if (opt.original && e.has_original !== (opt.original === "yes")) return false
   const hay = [e.id, e.name, e.summary, e.kind, ...(e.tags || []), ...(e.techniques || []), ...(e.stack || [])].join(" ").toLowerCase()
   return words.every((w) => hay.includes(w))
 })
 if (opt.json) console.log(JSON.stringify(hits, null, 2))
 else {
-  for (const e of hits) console.log(`${e.id.padEnd(52)} ${e.kind.padEnd(17)} ${e.complexity.padEnd(7)} ${e.summary}\n  -> library/${e.path}`)
+  for (const e of hits) {
+    console.log(`${e.id.padEnd(52)} ${e.kind.padEnd(17)} ${e.complexity.padEnd(7)} ${e.summary}\n  -> library/${e.path}`)
+    if (e.has_original) console.log(`  -> original: library/vault/${e.id}/prompt.md`)
+  }
   console.log(`\n${hits.length} of ${entries.length} entries`)
 }
