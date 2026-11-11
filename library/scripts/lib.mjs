@@ -40,8 +40,11 @@ export function listEntries() {
   return out
 }
 
-export function listPatterns() {
-  const dir = join(LIB, "patterns")
+export const listPatterns = () => listDocs("patterns")
+export const listTools = () => listDocs("tools")
+
+function listDocs(folder) {
+  const dir = join(LIB, folder)
   if (!existsSync(dir)) return []
   return readdirSync(dir)
     .filter((f) => f.endsWith(".md") && f !== "README.md")

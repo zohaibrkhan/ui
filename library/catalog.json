@@ -2,8 +2,16 @@
   "version": 1,
   "counts": {
     "entries": 0,
-    "patterns": 0
+    "patterns": 0,
+    "tools": 1
   },
   "patterns": [],
+  "tools": [
+    {
+      "id": "refero-styles",
+      "title": "Refero Styles",
+      "path": "tools/refero-styles.md"
+    }
+  ],
   "entries": []
 }

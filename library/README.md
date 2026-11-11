@@ -17,6 +17,7 @@ library/
     README.md             Provenance, licence notes, how to obtain originals
     sections/<slug>.md    One reference entry per section
   patterns/<slug>.md      Cross-cutting techniques that several entries share
+  tools/<slug>.md         External tools and references worth reaching for (pointers, not mirrors)
   scripts/                build-catalog, find, import-section (plain Node, no dependencies)
   vault/                  Gitignored. Licensed originals you imported for your own use
 ```
@@ -80,3 +81,9 @@ parsing those tools would share.
 | Source | Entries | Notes |
 | --- | --- | --- |
 | [oversight-supply](sources/oversight-supply/README.md) | 41 | Free sections from Oversight Supply. Analysis and original briefs only; originals are account-gated |
+
+## Tools
+
+| Tool | Use it for |
+| --- | --- |
+| [Refero Styles](tools/refero-styles.md) | Picking a visual direction by reference and getting it as a DESIGN.md |

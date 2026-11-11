@@ -3,7 +3,7 @@
 // Usage: node library/scripts/build-catalog.mjs [--check]
 import { readFileSync, writeFileSync, existsSync } from "node:fs"
 import { join } from "node:path"
-import { LIB, VAULT, listEntries, listPatterns, parseEntry, rel } from "./lib.mjs"
+import { LIB, VAULT, listEntries, listPatterns, listTools, parseEntry, rel } from "./lib.mjs"
 
 const schema = JSON.parse(readFileSync(join(LIB, "schema/entry.schema.json"), "utf8"))
 const REQUIRED_SECTIONS = ["## What it is", "## Layout anatomy", "## Visual system", "## Motion and interaction", "## Techniques worth reusing", "## Build brief"]
@@ -23,6 +23,7 @@ function validate(data, where) {
 }
 
 const patterns = listPatterns()
+const tools = listTools()
 const patternIds = new Set(patterns.map((p) => p.id))
 const entries = []
 for (const { source, slug, file } of listEntries()) {
@@ -48,7 +49,7 @@ if (errors.length) {
   process.exit(1)
 }
 
-const catalog = { version: 1, counts: { entries: entries.length, patterns: patterns.length }, patterns, entries }
+const catalog = { version: 1, counts: { entries: entries.length, patterns: patterns.length, tools: tools.length }, patterns, tools, entries }
 const out = JSON.stringify(catalog, null, 2) + "\n"
 const target = join(LIB, "catalog.json")
 if (process.argv.includes("--check")) {
