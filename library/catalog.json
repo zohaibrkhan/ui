@@ -2,10 +2,25 @@
   "version": 1,
   "counts": {
     "entries": 41,
-    "patterns": 9,
+    "patterns": 16,
     "tools": 2
   },
   "patterns": [
+    {
+      "id": "accent-theme-switching",
+      "title": "Accent theme switching",
+      "path": "patterns/accent-theme-switching.md"
+    },
+    {
+      "id": "audio-reactive-visual",
+      "title": "Audio-reactive visual",
+      "path": "patterns/audio-reactive-visual.md"
+    },
+    {
+      "id": "draggable-elements",
+      "title": "Draggable elements",
+      "path": "patterns/draggable-elements.md"
+    },
     {
       "id": "editorial-serif-display",
       "title": "Editorial serif display",
@@ -15,6 +30,21 @@
       "id": "evergrid-design-system",
       "title": "Evergrid design system",
       "path": "patterns/evergrid-design-system.md"
+    },
+    {
+      "id": "grid-rows-height-animation",
+      "title": "Grid-rows height animation",
+      "path": "patterns/grid-rows-height-animation.md"
+    },
+    {
+      "id": "interactive-demo-in-hero",
+      "title": "Interactive demo in the hero",
+      "path": "patterns/interactive-demo-in-hero.md"
+    },
+    {
+      "id": "live-region-summary",
+      "title": "Live-region summary",
+      "path": "patterns/live-region-summary.md"
     },
     {
       "id": "offscreen-loop-gating",
@@ -35,6 +65,11 @@
       "id": "reduced-motion-state-snap",
       "title": "Reduced-motion state snap",
       "path": "patterns/reduced-motion-state-snap.md"
+    },
+    {
+      "id": "rolling-number",
+      "title": "Rolling number",
+      "path": "patterns/rolling-number.md"
     },
     {
       "id": "scroll-pinned-story",
@@ -166,6 +201,7 @@
       "patterns": [
         "scroll-pinned-story",
         "scroll-scrubbed-animation",
+        "draggable-elements",
         "smooth-scroll",
         "editorial-serif-display"
       ],
@@ -1044,6 +1080,7 @@
       "patterns": [
         "scroll-pinned-story",
         "scroll-scrubbed-animation",
+        "draggable-elements",
         "smooth-scroll",
         "editorial-serif-display"
       ],
@@ -1257,6 +1294,7 @@
       "complexity": "high",
       "path": "sources/oversight-supply/sections/portfolio-collage.md",
       "patterns": [
+        "draggable-elements",
         "pointer-tracking"
       ],
       "has_original": false
@@ -1300,6 +1338,7 @@
       "complexity": "high",
       "path": "sources/oversight-supply/sections/portfolio-folio.md",
       "patterns": [
+        "draggable-elements",
         "editorial-serif-display"
       ],
       "has_original": false
@@ -1344,7 +1383,11 @@
       ],
       "complexity": "high",
       "path": "sources/oversight-supply/sections/portfolio-vinyl.md",
-      "patterns": [],
+      "patterns": [
+        "interactive-demo-in-hero",
+        "draggable-elements",
+        "audio-reactive-visual"
+      ],
       "has_original": false
     },
     {
@@ -1387,7 +1430,11 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/pricing-choice.md",
-      "patterns": [],
+      "patterns": [
+        "rolling-number",
+        "grid-rows-height-animation",
+        "live-region-summary"
+      ],
       "has_original": false
     },
     {
@@ -1431,7 +1478,10 @@
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/pricing-license.md",
       "patterns": [
-        "pointer-tracking"
+        "rolling-number",
+        "grid-rows-height-animation",
+        "pointer-tracking",
+        "live-region-summary"
       ],
       "has_original": false
     },
@@ -1476,7 +1526,10 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/pricing-studio.md",
-      "patterns": [],
+      "patterns": [
+        "rolling-number",
+        "live-region-summary"
+      ],
       "has_original": false
     },
     {
@@ -1520,6 +1573,7 @@
       "complexity": "high",
       "path": "sources/oversight-supply/sections/prompt-horizon.md",
       "patterns": [
+        "interactive-demo-in-hero",
         "pointer-tracking"
       ],
       "has_original": false
@@ -1565,7 +1619,10 @@
       "complexity": "high",
       "path": "sources/oversight-supply/sections/prompt-murmur.md",
       "patterns": [
-        "pointer-tracking"
+        "interactive-demo-in-hero",
+        "audio-reactive-visual",
+        "pointer-tracking",
+        "accent-theme-switching"
       ],
       "has_original": false
     },
@@ -1605,7 +1662,9 @@
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/prompt-parlor.md",
       "patterns": [
-        "pointer-tracking"
+        "interactive-demo-in-hero",
+        "pointer-tracking",
+        "accent-theme-switching"
       ],
       "has_original": false
     },

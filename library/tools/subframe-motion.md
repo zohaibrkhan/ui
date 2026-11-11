@@ -89,9 +89,11 @@ mechanisms for them. Starting queries for techniques that recur in the catalog:
 | `oversized-type`, `marquee` | "scroll velocity text" | `velocity-type` |
 | `webgl-shader-background` | browse category "WebGL & shaders" | `flow-memory`, `reaction-lab`, `noise-threshold` |
 | `pointer-tracking` | "image effect following the pointer" | `wake-image` |
+| `rolling-number` | "odometer digits for a changing price" | `sliding-number`, `animated-number` |
+| `draggable-elements` | "draggable cards with inertia" | `sticker-gravity`, `elastic-artboard`, `inertial-launcher` |
 | button and form feedback | "press feedback", "copy to clipboard button" | `copy-button`, `loading-button` |
 
-These pairings come from two searches, so treat them as leads rather than a survey.
+These pairings come from four searches, so treat them as leads rather than a survey.
 
 ## Shortlist
 
