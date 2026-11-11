@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "library/schema/entry.schema.json",
+  "title": "Design library entry (frontmatter)",
+  "description": "Frontmatter contract for every entry under library/sources/**/sections/*.md. Each frontmatter line is `key: <JSON value>` so it parses without a YAML dependency.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "source", "source_url", "kind", "origin", "access", "theme", "summary", "tags", "techniques", "stack", "complexity"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+/[a-z0-9-]+$", "description": "<source>/<slug>" },
+    "name": { "type": "string" },
+    "source": { "type": "string" },
+    "source_url": { "type": "string", "format": "uri" },
+    "preview_url": { "type": "string", "format": "uri" },
+    "kind": {
+      "enum": ["hero", "portfolio-hero", "scroll-story", "pricing", "features", "navigation", "footer", "cta", "faq", "team", "blog", "contact", "use-cases", "how-it-works", "integrations", "product-showcase", "other"]
+    },
+    "origin": { "type": "string", "description": "Who made it, e.g. 'Studio Original' or 'Evergrid template'" },
+    "access": { "enum": ["free-with-account", "paid", "open"] },
+    "theme": { "enum": ["light", "dark", "mixed"] },
+    "summary": { "type": "string", "maxLength": 240 },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "techniques": { "type": "array", "items": { "type": "string" }, "description": "Slugs of files in library/patterns/ (without .md) or free-form technique names" },
+    "stack": { "type": "array", "items": { "type": "string" }, "description": "Observed or recommended tech: css, svg, canvas, webgl, gsap, ..." },
+    "complexity": { "enum": ["low", "medium", "high"] }
+  }
+}
