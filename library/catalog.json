@@ -1,9 +1,9 @@
 {
   "version": 1,
   "counts": {
-    "entries": 8,
+    "entries": 12,
     "patterns": 0,
-    "tools": 1
+    "tools": 2
   },
   "patterns": [],
   "tools": [
@@ -11,6 +11,11 @@
       "id": "refero-styles",
       "title": "Refero Styles",
       "path": "tools/refero-styles.md"
+    },
+    {
+      "id": "subframe-motion",
+      "title": "Subframe Motion",
+      "path": "tools/subframe-motion.md"
     }
   ],
   "entries": [
@@ -313,6 +318,153 @@
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-home-navigation-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-home-product-showcase-01",
+      "name": "Evergrid Home - Product Showcase 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-home-product-showcase-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-home-product-showcase-01",
+      "kind": "product-showcase",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "Full-bleed image wall on dark green: three rows of rounded landscape photos, offset like brickwork, with a centre tile carrying a serif statement; rows are driven by a scroll-linked interaction.",
+      "tags": [
+        "image-wall",
+        "statement",
+        "photography",
+        "brand-moment",
+        "sustainability"
+      ],
+      "techniques": [
+        "image-collage",
+        "scroll-scrubbed-animation",
+        "offset-rows",
+        "editorial-serif-display"
+      ],
+      "stack": [
+        "webflow",
+        "css"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/evergrid-home-product-showcase-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-home-use-cases-01",
+      "name": "Evergrid Home - Use Cases 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-home-use-cases-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-home-use-cases-01",
+      "kind": "use-cases",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Left-aligned section header above three tall photo cards; each card is one link with a client logo, serif headline, named person and a circular arrow, rising in with a blur on scroll.",
+      "tags": [
+        "saas",
+        "case-studies",
+        "photo-cards",
+        "cms-list",
+        "serif-headline"
+      ],
+      "techniques": [
+        "photo-card-grid",
+        "text-reveal-on-scroll",
+        "blur-rise-reveal",
+        "editorial-serif-display",
+        "whole-card-link"
+      ],
+      "stack": [
+        "webflow",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-home-use-cases-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-pricing-pricing-01",
+      "name": "Evergrid Pricing - Pricing 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-pricing-pricing-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-pricing-pricing-01",
+      "kind": "pricing",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "mixed",
+      "summary": "Three equal dark-green plan cards on cream under a centred serif headline: name, blurb, big price, white pill CTA and two labelled check-lists, with a recommended tag and a full-width help strip below.",
+      "tags": [
+        "saas",
+        "pricing",
+        "three-tier",
+        "plan-cards",
+        "dark-cards"
+      ],
+      "techniques": [
+        "pricing-cards",
+        "grouped-feature-lists",
+        "mono-label-accents",
+        "text-swap-button",
+        "load-in-sequence",
+        "editorial-serif-display"
+      ],
+      "stack": [
+        "webflow",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-pricing-pricing-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/florilegium",
+      "name": "Florilegium",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/florilegium",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=florilegium",
+      "kind": "scroll-story",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "mixed",
+      "summary": "A pinned horizontal filmstrip of ten photo plates: vertical scroll slides the strip, the centred plate swells, a big clock ticks through the day, and the last plate expands to a full-bleed finale.",
+      "tags": [
+        "editorial",
+        "gallery",
+        "photography",
+        "minimal",
+        "monochrome",
+        "botanical",
+        "calm"
+      ],
+      "techniques": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "horizontal-scroll-gallery",
+        "focus-scale-carousel",
+        "card-to-fullscreen-expand",
+        "scroll-velocity-skew",
+        "parallax-layers",
+        "stat-counters",
+        "smooth-scroll",
+        "editorial-serif-display",
+        "mono-label-accents"
+      ],
+      "stack": [
+        "react",
+        "gsap",
+        "scrolltrigger",
+        "lenis",
+        "css"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/florilegium.md",
       "patterns": [],
       "has_original": false
     }
