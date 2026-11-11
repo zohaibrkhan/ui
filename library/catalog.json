@@ -1,11 +1,17 @@
 {
   "version": 1,
   "counts": {
-    "entries": 24,
-    "patterns": 0,
+    "entries": 29,
+    "patterns": 1,
     "tools": 2
   },
-  "patterns": [],
+  "patterns": [
+    {
+      "id": "evergrid-design-system",
+      "title": "Evergrid design system",
+      "path": "patterns/evergrid-design-system.md"
+    }
+  ],
   "tools": [
     {
       "id": "refero-styles",
@@ -718,6 +724,138 @@
       "has_original": false
     },
     {
+      "id": "oversight-supply/evergrid-product-features-01",
+      "name": "Evergrid Product - Features 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-product-features-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-product-features-01",
+      "kind": "features",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Alternating feature rows for a product page: square photo tiles hold either a corner-cropped dashboard screenshot or a frosted stack of metric cards, beside a serif heading, paragraph and check-list.",
+      "tags": [
+        "saas",
+        "zigzag",
+        "feature-rows",
+        "dashboard-crop",
+        "checklist"
+      ],
+      "techniques": [
+        "alternating-feature-rows",
+        "cropped-screenshot-tile",
+        "glassmorphism",
+        "editorial-serif-display"
+      ],
+      "stack": [
+        "webflow",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-product-features-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-product-hero-01",
+      "name": "Evergrid Product - Hero 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-product-hero-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-product-hero-01",
+      "kind": "hero",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "Dark-green rounded hero panel with nav inside it, a centred serif headline, a light pill CTA, a dashboard screenshot rising from the bottom edge, floating circular icon badges, and a logo strip beneath.",
+      "tags": [
+        "saas",
+        "product-hero",
+        "dashboard-mockup",
+        "floating-icons",
+        "logo-strip"
+      ],
+      "techniques": [
+        "editorial-serif-display",
+        "floating-icon-badges",
+        "logo-cloud",
+        "screenshot-rising-from-edge"
+      ],
+      "stack": [
+        "webflow",
+        "css"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/evergrid-product-hero-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-product-how-it-works-01",
+      "name": "Evergrid Product - How It Works 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-product-how-it-works-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-product-how-it-works-01",
+      "kind": "how-it-works",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "mixed",
+      "summary": "Three-step process block: centred serif title, a hairline with three numbered dark discs, and three tall dark-green cards each with an icon, step name, short description and a bottom-anchored bullet list.",
+      "tags": [
+        "saas",
+        "process",
+        "three-steps",
+        "dark-cards",
+        "stepper"
+      ],
+      "techniques": [
+        "timeline-steps",
+        "numbered-stepper-rail",
+        "bottom-anchored-lists",
+        "editorial-serif-display"
+      ],
+      "stack": [
+        "webflow",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-product-how-it-works-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-product-integrations-01",
+      "name": "Evergrid Product - Integrations 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-product-integrations-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-product-integrations-01",
+      "kind": "integrations",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "Integrations banner on a misty forest photo: a frosted panel with a green app-icon tile, serif title, one-line pitch and a light pill CTA, above two offset rows of frosted logo tiles cropped at the edges.",
+      "tags": [
+        "saas",
+        "integrations",
+        "logo-tiles",
+        "glass-panel",
+        "photography"
+      ],
+      "techniques": [
+        "glassmorphism",
+        "logo-cloud",
+        "offset-rows",
+        "editorial-serif-display"
+      ],
+      "stack": [
+        "webflow",
+        "css"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/evergrid-product-integrations-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
       "id": "oversight-supply/florilegium",
       "name": "Florilegium",
       "source": "oversight-supply",
@@ -901,6 +1039,60 @@
       ],
       "complexity": "high",
       "path": "sources/oversight-supply/sections/phototropism.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/pigment",
+      "name": "Pigment",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/pigment",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=pigment",
+      "kind": "scroll-story",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "A paper-toned hero you spray with grainy pigment by moving the pointer; scroll blooms the ambient stains, shrinks the surface into a rounded certificate card, and lets you download the result as a PNG.",
+      "tags": [
+        "generative",
+        "painterly",
+        "interactive",
+        "editorial",
+        "minimal",
+        "webgl",
+        "craft"
+      ],
+      "techniques": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "webgl-shader-background",
+        "three-js-scene",
+        "framebuffer-ping-pong",
+        "pointer-tracking",
+        "pointer-painting",
+        "grain-texture",
+        "stage-to-card-shrink",
+        "user-generated-artifact",
+        "sticky-nav",
+        "glassmorphism",
+        "split-text-animation",
+        "smooth-scroll",
+        "editorial-serif-display",
+        "mono-label-accents"
+      ],
+      "stack": [
+        "react",
+        "three",
+        "webgl",
+        "glsl",
+        "gsap",
+        "scrolltrigger",
+        "lenis",
+        "canvas",
+        "css"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/pigment.md",
       "patterns": [],
       "has_original": false
     }
