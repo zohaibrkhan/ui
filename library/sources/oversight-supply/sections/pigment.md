@@ -19,77 +19,65 @@ complexity: "high"
 
 ## What it is
 
-A hero that behaves like a sheet of paper under an airbrush. The cursor leaves stippled, fibrous blots of pigment that slowly drift and never repeat; pressing deepens them; three swatches change the colour. Scrolling runs a three-step story (spray, bloom, certify): the built-in stains swell, the headline blurs away, and the whole painted surface scales down into a rounded card labelled as a certificate, with a button that exports the composition, serial number and timestamp as an image. The pitch it makes for a brand is uniqueness: every visitor leaves with a different piece.
+A hero that behaves like a sheet of paper under an airbrush. The cursor leaves stippled, fibrous blots of pigment that slowly drift and never repeat; pressing deepens them; three swatches change the colour. Scrolling runs a three-step story (spray, bloom, certify): the built-in stains swell, the headline blurs away, and the whole painted surface scales down into a rounded card presented as a certificate, with a button that exports the composition, a serial number and a timestamp as an image. The pitch it makes for a brand is uniqueness: every visitor leaves with a different piece.
 
 ## Layout anatomy
 
-- 340vh track, sticky `100svh` stage on a slightly darker backdrop (`#dcd9d2`). Shortest pin in the family: 3060px at 1440x900, 2870px at 390x844.
-- The "sheet" is a full-stage element containing the WebGL canvas and everything printed on the artwork: spaced-caps wordmark top-left, index + italic name top-right, centred display headline (`clamp(58px, 11.4vw, 210px)`, `text-wrap: balance`, one word italic), a 270px two-paragraph note bottom-left, and an italic series number with an underlined serif numeral bottom-right. Because these live inside the sheet they shrink with it later.
-- Outside the sheet, fixed to the stage: a centred frosted step nav at the top (three mono items with index numbers; the active one gets small corner brackets), a scroll hint with an animated line, a caption line that appears under the card, and a bottom-centre frosted dock: three 24px round swatches, a divider, "clear" and a solid "save" button.
-- End state: the sheet is scaled to `clamp(0.42, (viewportH - 210px) / viewportH, 0.64)` (0.78 max and 230px reserve under 700px), nudged up 3%, with a 16px visual radius and a soft drop shadow. I measured the canvas at 922x576 CSS px in a 1440x900 viewport and 284x614 in 390x844.
-- A modal `figure` previews the exported PNG with download and close buttons.
+- A track a little over three viewport heights tall, the shortest pin in this family, with one sticky full-viewport stage on a backdrop slightly darker than the paper.
+- **The sheet:** a full-stage element holding the WebGL canvas and everything printed on the artwork: a spaced-caps wordmark at top left, an index and italic name at top right, a very large centred headline with one word in italic, a short two-paragraph note at bottom left and an italic series number at bottom right. Because these live inside the sheet, they shrink with it later.
+- **Outside the sheet,** fixed to the stage: a centred frosted step navigation at the top (three numbered mono items; the active one gains small corner brackets), a scroll hint with an animated line, a caption that appears under the card, and a frosted dock at bottom centre with three round colour swatches, a divider, "clear" and a solid "save" button.
 
 ## Visual system
 
-- **Type:** Instrument Serif for the headline, series numeral and name; Inter Variable for wordmark, note and certificate line; IBM Plex Mono 10.5-12px uppercase for nav, dock and captions.
-- **Colour:** paper `#ebe8e1`, backdrop `#dcd9d2`, ink `#1b1e16`, moss `#34511a`, lime `#c6e05a`. Pigments as core/edge pairs: moss `#2f4a17`/`#62812d`, ink `#1b2033`/`#46507a`, ochre `#7a3f14`/`#b8762f`.
-- **Shape and depth:** flat paper with shader "tooth" and grain; pills are translucent white with a 14px backdrop blur and a wide soft glow; the end card is the only element with a real shadow.
+- **Type:** Instrument Serif for the headline, series numeral and name; Inter for the wordmark, note and certificate line; IBM Plex Mono in small uppercase for navigation, dock and captions.
+- **Colour:** paper `#ebe8e1`, backdrop `#dcd9d2`, ink `#1b1e16`, moss `#34511a`, lime `#c6e05a`. Pigments come as a dark core and lighter edge: moss `#2f4a17` / `#62812d`, ink blue `#1b2033` / `#46507a`, ochre `#7a3f14` / `#b8762f`.
 
 ## Motion and interaction
 
-- **Rendering:** three.js used as a thin full-screen-quad runner (orthographic camera, three `ShaderMaterial`s, no geometry beyond the quad). Two half-float render targets ping-pong an accumulation buffer:
-  - *Update pass:* reads the previous buffer displaced along a slow rotated noise gradient (a cheap curl-like drift), multiplies by a decay of 0.9993, and adds up to 24 queued splats per pass (position, radius, strength) with a ragged, fibrous falloff.
-  - *Display pass:* paper colour plus tooth, six ambient "cloud" blobs whose positions wobble and whose radius is driven from script, then the accumulated pigment with stippled grain.
-- **Painting:** pointer movement queues splats interpolated along the path (radius 0.032, strength 0.22 hovering; 0.05 / 0.55 while pressed); holding still while pressed keeps adding. Pointer-down makes one heavy blot. The sheet uses `touch-action: pan-y`, so vertical swipes still scroll.
-- **Load:** wordmark letters and headline words fade in from an 18px blur; a `bloom` value eases to 35% and a scripted arc of splats draws a first stroke so the page is never blank.
-- **Scroll (scrubbed 0.6s):** 0-50% bloom rises to 100%, growing the ambient blobs; 26-50% headline words blur to 14px, lift and fade with a stagger; 44-84% the sheet scales to its card size with radius and shadow; 66-81% the certificate line sharpens from a 10px blur at the card centre; 78-90% caption. The active nav item switches at 25% and 80%; clicking a nav item scrolls to 0, 40% or 100%.
-- **Export:** renders a fresh frame, copies the WebGL canvas to a 2D canvas, sets the wordmark, serial, title and three lines of small print with canvas text, and offers the blob as a PNG download. The serial is a random four-digit number chosen once per visit.
-- **Fallback:** if WebGL is unavailable the canvas is hidden and a CSS radial-gradient approximation of the stains is shown.
-- **Reduced motion:** no Lenis and no intro; drift and decay are frozen and the loop only renders when something changes; the scroll timeline snaps between sheet and card at 55%.
+- **Painting:** moving the pointer lays a light continuous spray; pressing makes it larger and denser, and holding still while pressed keeps building. A press lands one heavy blot. Paint spreads and drifts very slowly after it lands. Vertical swipes still scroll the page on touch.
+- **Scroll chapters:** in the first half the ambient stains grow to full size and the headline words blur, lift and fade one after another. Around the middle the sheet scales down to its card size, gaining rounded corners and a shadow. Late on, a certificate line sharpens into focus at the card centre and a dated caption appears beneath. The navigation highlights the current step, and clicking a step scrolls to it.
+- **Fallback:** if WebGL is unavailable, a static gradient approximation of the stains is shown instead.
+- **Reduced motion:** native scrolling, no intro, paint stays where it lands, frames are drawn only when something changes, and the story snaps between sheet and card.
 
 ## Techniques worth reusing
 
-- **Ping-pong accumulation with drift and decay** - the standard recipe for paint, smoke or trails: sample the last frame slightly displaced, fade it, add new input. Batching splats into a uniform array keeps it to one pass per frame.
-- **Ambient blobs driven from script** - a handful of animated uniforms guarantees a good-looking composition even if the visitor never touches it.
-- **Hero becomes an object** - scaling the entire stage into a card reframes "background effect" as "thing you made", and sets up an export or share step.
-- **Canvas-composited export** - draw the GL frame into a 2D canvas and typeset labels there, rather than trying to screenshot the DOM.
-- **Render on demand** - a dirty flag lets the reduced-motion version reuse the same renderer without a running loop.
+- **Feedback buffer with drift and fade** - the standard recipe for paint, smoke or trails: two render targets swap roles each frame; the update pass samples the previous frame slightly displaced by a slow noise field, fades it a touch, and adds new input. Batching the frame's brush marks into one uniform array keeps it to a single pass.
+- **Hero becomes an object** - scaling the whole stage into a card reframes "background effect" as "thing you made" and sets up an export or share step.
+- **Canvas-composited export** - copy the WebGL frame into a 2D canvas and typeset labels there rather than trying to capture the DOM.
 
 ## Build brief
 
 ```text
-Build a pinned "paint the hero, then keep it" section with a three-step scroll story.
+Build a pinned "mark the hero, then keep it" section with a three-step scroll story.
 
-Structure: a <section> track ~3.4 viewport heights tall with a sticky 100svh stage on [BACKDROP
-COLOUR]. Inside, a full-stage "sheet" (transform-origin centre) holds a WebGL canvas plus printed
-details: [WORDMARK] top-left, [INDEX + NAME] top-right, a huge centred [HEADLINE] split into word
-spans, a short note bottom-left, a series number bottom-right, and a hidden centred [CERT TITLE].
-Outside the sheet: a frosted 3-step nav top-centre ([STEP 1] [STEP 2] [STEP 3]) that tracks scroll
-and jumps on click, a caption line, and a frosted dock with 3 colour swatches, "Clear" and "Save".
+Structure: a section track about three viewport heights tall with one sticky full-viewport
+stage. A full-stage "sheet" holds a canvas plus whatever is printed on the piece: [WORDMARK],
+a large [HEADLINE] split into words, a short note and an [EDITION LABEL]. Outside the sheet:
+a three-step progress navigation ([STEP 1], [STEP 2], [STEP 3]) that tracks scroll and jumps
+on click, a small set of [MEDIUM OPTIONS] to choose from, and "clear" and "save" actions.
 
-Rendering: full-screen quad, two float render targets. Update pass = previous buffer sampled with
-a small noise-based drift, multiplied by ~0.999 decay, plus up to 24 new splats (x, y, radius,
-strength) with a noisy fibrous edge, tinted between the active swatch's core and edge colours.
-Display pass = paper colour + grain + 5-6 soft ambient stains whose radius follows a `bloom`
-uniform + the accumulated pigment. Queue splats along the pointer path; larger and stronger while
-pressed. touch-action: pan-y on the sheet. Draw a short scripted stroke on load.
+Rendering: a full-screen pass over two swapping render targets. Each frame, take the previous
+buffer, optionally displace and fade it slightly, and add marks along the pointer path in the
+project's own [MARK STYLE] (ink, light, thread, chalk, pixels), stronger while pressed. A
+display pass draws [SURFACE], a few ambient shapes whose size follows a scroll-driven value,
+and the accumulated marks. Draw one scripted mark on load so the surface is never empty. Keep
+vertical touch scrolling working.
 
-Scroll (one scrubbed timeline): 0-50% bloom 0.35->1; 26-50% headline words blur and fade; 44-84%
-scale the sheet to clamp(0.42, (vh-210px)/vh, 0.64) with rounded corners and a soft shadow;
-66-81% reveal the certificate title; then show a caption with date and time.
+Scroll: one scrubbed timeline. First: ambient shapes intensify and the headline clears.
+Middle: the sheet scales down into a card with rounded corners and a shadow. Last: a
+[CERT TITLE] and a caption with date and time appear.
 
-Save: render a frame, copy the canvas into a 2D canvas, draw wordmark, title, a random series
-number and small print, export PNG, preview it in a modal with Download and Close.
+Save: render a fresh frame, copy it to a 2D canvas, typeset the labels and a generated edition
+number, and offer a PNG through a preview dialog with download and close.
 
-Reduced motion: native scroll, no drift or decay, render only when dirty, snap sheet <-> card.
-Fallback: CSS gradient stains if WebGL fails. Accessibility: nav uses aria-current="step", swatches
-are labelled buttons, modal traps focus. Performance: cap DPR at 2, pause the loop off screen.
+Quality bars: reduced motion uses native scroll, freezes drift, renders only when dirty and
+snaps between sheet and card; a CSS fallback when WebGL is missing; the navigation marks the
+current step for assistive tech; options are labelled buttons; the dialog manages focus; cap
+device pixel ratio and pause off screen; check legibility of overlaid text on small screens.
 ```
 
 ## Adaptation notes
 
 - Suits editions, prints, perfume, wine, ceramics: anything sold on "no two alike".
-- Check small screens. In my 390px capture the ambient stains at full bloom covered most of the card and the dark certificate line became unreadable against them; scale blob radius by viewport width or place the title on a paper-coloured plate.
-- three.js adds roughly 470KB of unminified-equivalent bundle for what is three fragment shaders on a quad; a raw WebGL or OGL implementation would be far lighter.
-- Half-float render targets need `EXT_color_buffer_half_float` on some mobile GPUs; keep the CSS fallback.
-- The headline is live text over the canvas, which is good for SEO and selection; keep it out of the canvas.
+- Check small screens. In my phone-width capture the ambient stains at full strength covered most of the card and the dark certificate line became unreadable against them (the test pointer was parked mid-stage and may have added to it).
+- three.js is used only as a runner for full-screen passes; a lighter WebGL helper or raw WebGL would cut most of the bundle.

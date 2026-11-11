@@ -19,81 +19,72 @@ complexity: "high"
 
 ## What it is
 
-A generative illustration used as a hero. A field of procedurally drawn plants grows in on load, and every stem bends toward a glowing light that follows the pointer. The headline joins in: each letter tilts toward the light too. Clicking drops a seed that sprouts a new plant. Scrolling does not move anything; it advances a clock from 06:40 to 22:40, re-colouring the sky, closing the flowers at dusk and releasing fireflies at night before the closing headline appears. One 2D canvas, no WebGL.
+A generative illustration used as a hero. A field of procedurally drawn plants grows in on load, and every stem bends toward a glowing light that follows the pointer. The headline joins in: each letter tilts toward the light too. Clicking drops a seed that sprouts a new plant. Scrolling does not move anything; it advances a clock from early morning to late evening, re-colouring the sky, closing the flowers at dusk and releasing fireflies at night before the closing headline appears. One 2D canvas, no WebGL.
 
 ## Layout anatomy
 
-- 460vh track, sticky `100svh` stage (4140px at 1440x900; 3882px at 390x844). Crosshair cursor over the whole stage.
-- Full-stage `canvas` (given `role="img"` and a descriptive label) with a paper-grain overlay above it (multiply at 50% by day, screen at 12% at night).
-- Ground line at 87% of the stage height (86% on mobile); plants root on it and a textured soil band fills the rest.
-- UI: top bar (brand / title / live clock with a sun or moon glyph and a "planted NN" count), headline top-left in three lines (`clamp(52px, 7.4vw, 138px)`, third line italic), a 330px helper paragraph below it, a two-button pill dock top-right under the bar, two right-aligned chapter captions (dusk, night) and a closing block that replaces the headline in the same top-left position.
-- On mobile the dock moves to the bottom centre over the soil band and the captions sit left-aligned under the headline.
+- A track between four and five viewport heights tall with one sticky, full-viewport stage and a crosshair cursor throughout.
+- A full-stage canvas, exposed as an image with a description, under a paper-grain overlay that is strong by day and faint at night.
+- **Interface:** a top bar with brand, title and a live clock showing a sun or moon glyph and a count of things planted; a three-line headline at top left with the last line italic; a helper paragraph beneath it; a two-button pill dock at top right under the bar; two short chapter captions on the right (dusk, night); and a closing block that replaces the headline in the same top-left position.
+- At phone width the dock moves to the bottom centre over the soil band and the captions sit left-aligned under the headline.
 
 ## Visual system
 
-- **Type:** Instrument Serif display (0.9 line-height, -0.03em); Inter 13px helper; IBM Plex Mono 10.5px uppercase labels. Text colour is not fixed: the stage's ink variable is driven from the canvas palette, so type shifts from brown to cream as night falls.
-- **Colour:** four palette keyframes interpolated by time of day, each with sky top, sky bottom, ink, leaf fill and glow:
-  - morning (0): `#f7f0e3` / `#f1dfc4`, ink `#3b2f22`, glow `#ffd38a`
-  - dusk (0.45): `#6d5c88` / `#f2a578`, ink `#2c2231`, glow `#ffb07a`
-  - night (0.75-1): `#0c1122` / `#1c2340` then `#0a0e1c` / `#171d36`, ink `#ece3cc`, glow `#b9d0ff`
+- **Type:** Instrument Serif display; Inter for the helper; IBM Plex Mono in small uppercase for labels. Text colour is not fixed: it follows the scene, shifting from brown to cream as night falls.
+- **Colour:** a handful of time-of-day palettes blended continuously, each with a sky top, sky bottom, ink and glow:
+  - morning: `#f7f0e3` to `#f1dfc4`, ink `#3b2f22`, glow `#ffd38a`
+  - dusk: `#6d5c88` to `#f2a578`, ink `#2c2231`, glow `#ffb07a`
+  - night: `#0c1122` to `#1c2340`, ink `#ece3cc`, glow `#b9d0ff`
   - Fireflies and the closing italic use lime `#d6f06b`.
-- **Shape and depth:** everything is 1px-ish ink outline with a flat fill slightly lighter than the sky; back-row plants are drawn at half opacity for depth. The light is a radial gradient about a third of the stage wide with a small bright core.
 
 ## Motion and interaction
 
-- **Plants:** 48 on desktop, 26 on mobile, generated from a fixed seed so the meadow is the same every visit. Each has a 14-segment stem with its own curvature, bend limit, response speed, 1-3 leaves and one of several heads (daisy, tulip, bell, dandelion, bud). They grow segment by segment over 2-3.6s with delays sweeping left to right, then bloom.
-- **Leaning:** each frame a plant computes the angle from its mid-stem to the light, clamps it to its bend limit, and eases toward it at its own rate; the bend is distributed along the stem with a power curve so the tip moves most. A small two-frequency sine adds sway. 170 grass blades (70 on mobile) lean the same way, more weakly.
-- **Light:** follows the pointer with a fast exponential ease; after 4s without input it wanders on a slow Lissajous path so the scene never looks dead.
-- **Headline:** letters are individual inline-blocks with `transform-origin: 50% 92%`; script rotates each toward the light (formula not transcribed), so the type behaves like the plants.
-- **Planting:** a click (or the dock button, at a random x) drops a seed that falls with gravity and sprouts where it lands; planted plants are capped at 30, oldest removed. Dandelion heads shed drifting seeds when the pointer passes quickly (over about 350px/s) or when something is planted nearby.
-- **Scroll (scrubbed 0.6s):** progress 6-66% maps to time of day 0-1. Flower openness falls between 35% and 70% of the day; from 55-80% fireflies fade in (up to 60 desktop, 28 mobile), drawn additively, drifting and attracted to the light within 260px. At night flowers near the light reopen. DOM beats: 5% helper and dock out; dusk caption 26-47%; night caption 58-83%; headline out at 80%; closing block at 88%. Planting is disabled past 86%.
-- **Reduced motion:** no Lenis, no intro; plants are drawn fully grown, sway and wandering light are off, and the timeline snaps to morning / 70% / end.
-- DPR capped at 1.5 on desktop and 2 on mobile; the loop pauses off screen and when the tab is hidden.
+- **Plants:** a few dozen on desktop and roughly half that on phones, the same meadow on every visit. Each has its own height, curve, leaves and one of several flower heads. They grow upward in a left-to-right sweep after load, then bloom.
+- **Leaning:** every plant bends toward the light at its own pace and up to its own limit, with the tip moving most; a gentle sway continues underneath. Grass blades lean the same way, more weakly.
+- **Light:** follows the pointer closely; after a few idle seconds it wanders slowly by itself so the scene never looks dead.
+- **Headline:** each letter pivots near its baseline toward the light, so the type behaves like the plants.
+- **Planting:** a click, or the dock button, drops a seed that falls and sprouts where it lands. Dandelion heads shed drifting seeds when the pointer sweeps past quickly.
+- **Scroll chapters:** the first two thirds of the pin run the clock through the day. Flowers close through dusk, a caption marks it, the sky turns to night and fireflies fade in, drifting and gathering near the light; flowers near the light reopen. Late on, the headline fades and the closing block takes its place. Planting is switched off near the end.
+- **Reduced motion:** native scrolling, no intro; plants are drawn fully grown with no sway or wandering light, and the story snaps between three times of day.
 
 ## Techniques worth reusing
 
-- **Pointer as light source** - one smoothed point drives stems, grass, fireflies, glow and typography, which makes a simple rule read as a living scene.
-- **Scroll as time, not position** - the pinned picture stays put while scroll scrubs a palette-keyframe function. A table of keyframes plus smoothstep interpolation is all it takes.
-- **Ink colour shared between canvas and DOM** - write the interpolated ink colour to a CSS variable so text always contrasts with the drawn sky.
-- **Seeded genomes** - generate each plant from a PRNG "genome" (height, curvature, leaves, head type) for variety without assets.
-- **Idle behaviour** - a wandering default target avoids a dead scene on touch devices and for keyboard users.
+- **Pointer as light source** - one smoothed point drives stems, grass, particles, glow and typography, so a single simple rule reads as a living scene.
+- **Scroll as time, not position** - the pinned picture stays put while scroll moves through a table of palette keyframes with smooth interpolation between them.
+- **Ink colour shared between canvas and DOM** - writing the current ink colour to a CSS variable keeps text contrasting with a drawn background that changes.
 
 ## Build brief
 
 ```text
-Build a pinned, generative line-art hero where the scene leans toward the pointer and scroll
-changes the time of day. One 2D canvas plus DOM text.
+Build a pinned generative hero in which a field of drawn [OBJECTS] orients toward the pointer,
+and scroll changes the [AMBIENT STATE] of the scene rather than moving it. One 2D canvas plus
+DOM text.
 
-Structure: a <section> track ~4.6 viewport heights tall with a sticky 100svh stage containing a
-full-size <canvas role="img" aria-label="[SCENE DESCRIPTION]">, a grain overlay, a top bar
-([BRAND], [TITLE], live clock + counter), a three-line display [HEADLINE] with every letter wrapped
-in an inline-block span, helper text, a pill dock ("Add one", "Skip to night"), two chapter
-captions, and a closing block ([KICKER], [CLOSING HEADLINE], [BODY], "Back to start").
+Structure: a section track four to five viewport heights tall with one sticky full-viewport
+stage containing a full-size canvas with an image role and description, an optional texture
+overlay, a [HEADLINE] whose letters are individually wrapped, one line of instruction, a
+control to add an object and a control to skip ahead, one caption per chapter, and a closing
+block with [CLOSING HEADLINE], [BODY] and a return action.
 
-Scene: from a fixed seed generate ~48 [OBJECTS] (26 under 700px) rooted on a ground line at 87%
-height. Each is a 14-segment polyline with random curvature, bend limit, response rate and a head
-shape. Animate growth on load, left to right. Keep a "light" point that eases to the pointer and
-wanders slowly after 4s idle. Each frame every object eases its bend toward
-clamp(angle to light, +/-limit), distributing the bend along its length; add gentle sine sway.
-Rotate each headline letter a few degrees toward the light around its baseline. Clicking drops a
-seed that falls and grows a new object (cap 30).
+Scene: generate the objects from a fixed seed so the composition is stable; use noticeably
+fewer on narrow screens. Keep one "attractor" point that eases toward the pointer and drifts
+slowly when idle. Each frame every object eases its orientation toward the attractor at its
+own rate and within its own limit, with a little ambient motion on top. Let the headline
+letters respond to the same attractor. Clicking adds a new object with a short arrival
+animation; cap how many can be added.
 
-Palette: define 4 keyframes {t, skyTop, skyBottom, ink, fill, glow} for morning, dusk, night and
-late night; interpolate by t and write the ink colour to a CSS variable used by all text.
+Ambient state: define a few keyframes for [AMBIENT STATE] (time of day, season, weather,
+temperature), each with background colours, an ink colour and an accent. Interpolate by scroll
+progress and publish the ink colour as a CSS variable used by all overlaid text. Introduce one
+new behaviour per chapter, announce it with a caption, and swap the headline for the closing
+block near the end.
 
-Scroll: one scrubbed timeline; map progress 6-66% to t 0-1. Close the heads through dusk, fade in
-additive glowing particles at night that drift toward the light, show captions at dusk and night,
-swap the headline for the closing block at ~88%.
-
-Reduced motion: draw everything fully grown, no sway or idle wander, native scroll, snap between
-three times of day. Performance: cap DPR at 1.5, batch strokes per layer, pause the loop off
-screen. Accessibility: buttons are real buttons; the canvas label describes the scene.
+Quality bars: check text contrast at every keyframe; reduced motion draws the finished scene
+with no ambient movement, uses native scroll and snaps between keyframes; cap device pixel
+ratio, batch drawing by layer, pause the loop off screen; controls are real buttons.
 ```
 
 ## Adaptation notes
 
-- The "leans toward you" rule transfers to anything with stalks or strands: wheat, hair, cables, typography, crowd figures, needles on a gauge.
-- The whole section is on brand only if the line-art style suits it; change head shapes and palette keyframes before touching behaviour.
-- The clickable stage means stray clicks plant things; that is charming here but would be noise on a page with nearby links.
-- Text over a changing sky needs checking at every keyframe: dusk (dark ink on purple-to-orange) is the lowest-contrast moment.
-- Keyboard users can plant with the dock button but cannot steer the light; the idle wander covers that case.
+- The "leans toward you" rule transfers to anything with stalks or strands: wheat, hair, cables, lettering, crowd figures, needles on a gauge.
+- Text over a changing sky needs checking at every stage: dusk, with dark ink on purple-to-orange, is the lowest-contrast moment.
