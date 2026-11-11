@@ -10,7 +10,7 @@ access: "free-with-account"
 theme: "light"
 summary: "Cream-panel FAQ: left-aligned serif heading, a stack of white full-width question bars with plus icons, and a closing contact row with a pill button."
 tags: ["saas", "calm", "cream-and-green", "faq", "support"]
-techniques: ["accordion", "editorial-serif-display", "fade-in-on-scroll", "text-roll-button"]
+techniques: ["accordion", "editorial-serif-display", "pill-button-with-arrow-chip"]
 stack: ["webflow", "gsap", "scrolltrigger", "css"]
 complexity: "low"
 ---
@@ -21,15 +21,15 @@ complexity: "low"
 
 A frequently-asked-questions block for a SaaS home page. Four questions sit as separate white bars on a cream panel, and the list ends with a fifth bar that is not a question at all but a "still stuck?" row with a contact button. The idea that carries it: the escape hatch is styled as the last item of the list, so nobody reaches the end without a next step.
 
-> Evidence basis: the catalogue thumbnail (a desktop render) plus the DOM of the public preview. The template stylesheet, fonts and scripts sit on a third-party CDN that was unreachable from the analysis environment, so the preview rendered unstyled: hover, scroll and sub-desktop behaviour below are inferred from markup and marked as such, and pixel values are estimates from the thumbnail.
+> Evidence basis: this entry is based on a single static public thumbnail (a desktop render); the live preview was unavailable. Colour values are sampled from that screenshot and sizes are estimates or proportions, not measured CSS.
 
 ## Layout anatomy
 
 - One container, single column. Heading block (h2 plus a two-line paragraph capped at roughly 30% of the container width) is left-aligned, followed by a gap about 1.5x the heading height.
 - The list is a vertical stack of full-width bars with a constant gap of roughly a quarter of a bar's height. Each bar is a row: a small plus icon, then the question, both left-aligned with generous inline padding; nothing on the right edge.
-- In the DOM each item is a wrapper holding a question row and an answer holder (a thin decorative line image plus the answer paragraph), so the answer expands inside the same white bar.
+- All four questions are closed in the thumbnail; the plus icon implies each bar expands to show its answer, but the open state was not seen.
 - The final bar is a two-column row: bold question-weight line plus muted sub-line on the left, pill button pushed to the far right. It is about 1.6x the height of a question bar.
-- Mobile reflow: not determined (expect the contact row to stack and the button to go full width).
+- Tablet and mobile reflow: not determined (live preview unavailable).
 
 ## Visual system
 
@@ -39,10 +39,7 @@ A frequently-asked-questions block for a SaaS home page. Four questions sit as s
 
 ## Motion and interaction
 
-- Heading and paragraph are wrapped in fade-in-on-scroll containers (the page loads GSAP 3 with ScrollTrigger and Webflow interactions), so they fade up as the section enters.
-- Each question row toggles its answer holder. The markup has no button element, no aria-expanded and no region role: the rows are plain divs driven by the interaction engine. Open-state styling (icon rotation, height easing, single-open versus multi-open) was not observed.
-- The pill button holds two stacked copies of its label and two arrow chips with an overlay layer, the signature of a label-roll and chip-swap hover. Not observed live.
-- Reduced-motion handling: not determined.
+Not determined (live preview unavailable). The only related fact observed is that the template is a Webflow build whose page loads GSAP 3 with ScrollTrigger and SplitText, so scroll-reveal and split-text motion is plausible, but none of it was seen running. Hover, focus, open/close and reduced-motion behaviour were not observed.
 
 ## Techniques worth reusing
 
@@ -80,4 +77,4 @@ fonts load, no JS required to read the answers (content in the DOM, crawlable, F
 
 ## Adaptation notes
 
-Works anywhere near the bottom of a marketing page, directly above a CTA or footer. First change: replace the div-based toggles with real buttons, since the observed markup exposes no semantics to assistive tech. With more than eight questions, group them or add a search field; the bar treatment gets heavy when long. The white-on-cream contrast between bar and panel is subtle (about 1.1:1), so do not rely on it alone to signal interactivity: keep the icon and a hover tint.
+Works anywhere near the bottom of a marketing page, directly above a CTA or footer. Build the toggles as real buttons with aria-expanded; the reference's semantics could not be inspected. With more than eight questions, group them or add a search field; the bar treatment gets heavy when long. The white-on-cream contrast between bar and panel is subtle (about 1.1:1), so do not rely on it alone to signal interactivity: keep the icon and a hover tint.

@@ -8,47 +8,42 @@ kind: "product-showcase"
 origin: "Evergrid template"
 access: "free-with-account"
 theme: "dark"
-summary: "Full-bleed image wall on dark green: three rows of rounded landscape photos, offset like brickwork, with a centre tile carrying a serif statement; rows are driven by a scroll-linked interaction."
+summary: "Image wall on dark green: three rows of rounded landscape photos with staggered seams and edge-cropped tiles, and a large washed centre tile carrying a two-line serif statement."
 tags: ["image-wall", "statement", "photography", "brand-moment", "sustainability"]
-techniques: ["image-collage", "scroll-scrubbed-animation", "offset-rows", "editorial-serif-display"]
+techniques: ["image-collage", "offset-rows", "editorial-serif-display"]
 stack: ["webflow", "css"]
 complexity: "medium"
 ---
 
 # Evergrid Home - Product Showcase 01
 
-> **Evidence note.** This section is a Webflow export. Its stylesheet, scripts, fonts and images load from a CDN our sandbox could not reach, so the live preview rendered unstyled. This entry is based on the public preview's DOM (structure, class roles, inline initial animation states) and the vendor's public thumbnail (a 2050px-wide still, colours sampled from it). Hover/click states and the 390px layout were not rendered; anything marked *inferred* follows from markup only.
-
 ## What it is
 
-A brand interlude rather than a literal product demo: a wall of photography that fills the viewport, with one sentence of mission copy on the middle tile. It breaks up a run of feature sections and gives the page an emotional beat. The idea is a brick-bond mosaic that extends past the viewport edges so it feels larger than the screen.
+A brand interlude rather than a literal product demo: a wall of photography with one sentence of mission copy on the middle tile. It breaks up a run of feature sections and gives the page an emotional beat. The idea is a brick-bond mosaic that runs past the frame edges so it feels larger than the screen. This entry is based on the vendor's static public thumbnail (a 2050px-wide still); the live preview was unavailable to us, so sizes are proportions of that image and colours are sampled from a screenshot.
 
 ## Layout anatomy
 
-- Outer wrapper spans the full section width with no container; an inner element clips overflow.
-- Three horizontal rows ("top", "middle", "bottom"), each holding three tiles in a row that is wider than the viewport, so the outer tiles are cropped by the edges.
-- **Top and bottom rows:** three photos each; in the thumbnail only two are visible per row, split unevenly (about 44% / 56% on top, 61% / 39% on the bottom), which staggers the vertical seams like brickwork.
-- **Middle row:** photo, statement tile, photo. The statement tile is the hero: about 77% of the visible width and roughly 2.3x the height of the outer rows; side tiles show only about 10% slivers.
-- **Statement tile:** photo at full width, a dark-green overlay, and a centred `h2` constrained to a max-width so it wraps onto two lines.
-- Gutters are uniform, about 1% of the frame width (roughly 16px), and are simply the dark background showing through.
-- Mobile behaviour not observed.
+- Three horizontal rows on a dark-green ground; the ground shows through as uniform gutters of about 1% of the wall width (roughly 16px).
+- **Top row:** two visible photos split about 44% / 56%. **Bottom row:** two visible photos split about 61% / 39%. The differing splits stagger the vertical seams like brickwork. Both rows are cropped by the top/bottom edge.
+- **Middle row:** about 2.3x the height of the outer rows. A centre tile takes about 77% of the width; narrow slivers (about 10% each) of neighbouring photos show left and right, cropped by the edges.
+- **Centre tile:** photo under a grey-green wash, with a centred two-line serif statement occupying about 38% of the wall width.
+- Whether the rows continue beyond the visible crop, and tablet/mobile behaviour: not determined (live preview unavailable).
 
 ## Visual system
 
-- **Type:** Lora serif, white, about 2.2% of frame width in size (roughly 40px on a 1440 layout), regular weight, centred, generous tracking.
-- **Colour:** gutter/background deep green `#163629`-`#183529`; overlay on the centre tile a desaturated green at around 60%; photography is saturated natural colour (meadow, sea, sky, wheat) which contrasts with the muted centre.
-- **Shape and depth:** every tile has a radius of about 16-20px; no borders or shadows; the cropping at the edges does the framing.
+- **Type:** serif (reads as Lora), white, about 2.2% of wall width in size (roughly 34-40px on a 1440 layout), regular weight, centred, slightly open tracking, leading about 1.35.
+- **Colour (sampled from a screenshot):** ground deep green `#163629`-`#183529`; centre wash a desaturated green at roughly 60%; surrounding photography left in saturated natural colour (meadow, sea, sky, wheat).
+- **Shape and depth:** every tile has a radius of about 16-20px; no borders or shadows; edge cropping does the framing.
 
 ## Motion and interaction
 
-- The wrapper carries one interaction trigger covering the whole wall. With three rows named top/middle/bottom inside an overflow-hidden parent, the intended effect is rows sliding horizontally in opposing directions as the section scrolls through the viewport (inferred; exact distances and whether it is scrubbed or timed were not determined because the interaction script was unreachable).
-- No hover or click behaviour. Reduced-motion handling: not determined.
+Not determined (live preview unavailable). The thumbnail is a still, so no load, scroll, hover or focus behaviour was seen. One observed fact: the template is a Webflow build that loads GSAP 3 with ScrollTrigger and SplitText, so scroll-reveal and split-text motion are plausible, but we did not see them run. Reduced-motion handling: not determined.
 
 ## Techniques worth reusing
 
-- **Overscaled rows** - make each row 120-150% of the viewport width and centre it; the cropped edges imply a bigger canvas and give you room to translate rows without exposing gaps.
-- **Muted centre, vivid edges** - overlay only the tile that carries text so legibility is guaranteed while the surrounding photos stay colourful.
-- **Gutter as background** - use `gap` over a coloured section instead of borders; changing one colour re-themes the wall. See `../../../patterns/evergrid-design-system.md`.
+- **Staggered-seam rows** - give each row different tile ratios so no gutter lines up vertically; the result reads as a mosaic rather than a table.
+- **Muted centre, vivid edges** - wash only the tile that carries text so legibility is guaranteed while the surrounding photos stay colourful.
+- **Gutter as background** - use `gap` over a coloured section instead of borders; one colour re-themes the wall. See `../../../patterns/evergrid-design-system.md`.
 
 ## Build brief
 
@@ -83,4 +78,4 @@ layout shift; will-change only while the section is in view.
 
 ## Adaptation notes
 
-Use once per page at most. It needs seven or eight photographs with a consistent grade; mixed stock will look like a collage accident. For a literal product showcase, replace the outer photos with UI crops and keep the centre for the claim. Horizontal movement must stay small or it reads as a carousel that cannot be controlled.
+Use once per page at most. It needs seven or eight photographs with a consistent grade. For a literal product showcase, replace the outer photos with UI crops and keep the centre for the claim. The scroll-linked row drift in the brief is our own suggestion (the layout invites it); keep the travel small or drop it.

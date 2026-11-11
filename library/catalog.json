@@ -1,7 +1,7 @@
 {
   "version": 1,
   "counts": {
-    "entries": 12,
+    "entries": 24,
     "patterns": 0,
     "tools": 2
   },
@@ -134,11 +134,9 @@
       ],
       "techniques": [
         "timeline-steps",
-        "scroll-scrubbed-animation",
-        "sticky-progress-line",
+        "progress-rail",
         "editorial-serif-display",
-        "fade-in-on-scroll",
-        "text-roll-button"
+        "pill-button-with-arrow-chip"
       ],
       "stack": [
         "webflow",
@@ -148,6 +146,280 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/evergrid-about-us-features-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-about-us-features-02",
+      "name": "Evergrid About Us Features 02",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-about-us-features-02",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-about-us-features-02",
+      "kind": "features",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "Dark-green split panel: serif claim top-left, one oversized statistic with a small unit bottom-left, and a large captioned photo on the right.",
+      "tags": [
+        "saas",
+        "about",
+        "statistic",
+        "dark-green",
+        "split-layout"
+      ],
+      "techniques": [
+        "stat-counters",
+        "editorial-serif-display",
+        "oversized-type"
+      ],
+      "stack": [
+        "webflow",
+        "gsap",
+        "scrolltrigger",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-about-us-features-02.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-about-us-other-01",
+      "name": "Evergrid About Us Other 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-about-us-other-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-about-us-other-01",
+      "kind": "other",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "Open-roles careers block: centred heading over a 2x2 grid of translucent frosted cards on a green-washed landscape photo, each with title, terms, blurb and a full-width outline pill.",
+      "tags": [
+        "careers",
+        "job-listings",
+        "saas",
+        "photo-background",
+        "frosted-cards"
+      ],
+      "techniques": [
+        "glassmorphism",
+        "editorial-serif-display",
+        "pill-button-with-arrow-chip",
+        "photo-background-with-tint"
+      ],
+      "stack": [
+        "webflow",
+        "gsap",
+        "scrolltrigger",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-about-us-other-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-about-us-team-01",
+      "name": "Evergrid About Us Team 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-about-us-team-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-about-us-team-01",
+      "kind": "team",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Three-column team grid of tall rounded portraits with a row of circular social buttons overlaid on the photo and a serif name plus small role line beneath.",
+      "tags": [
+        "team",
+        "about",
+        "portraits",
+        "cream-and-green",
+        "saas"
+      ],
+      "techniques": [
+        "overlay-social-links",
+        "editorial-serif-display"
+      ],
+      "stack": [
+        "webflow",
+        "gsap",
+        "scrolltrigger",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-about-us-team-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-blog-blog-01",
+      "name": "Evergrid Blog Blog 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-blog-blog-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-blog-blog-01",
+      "kind": "blog",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Three-column blog index of bordered cards: square rounded image flush to the top, serif two-line title, grey excerpt and a small text footer, with a slide-up reveal.",
+      "tags": [
+        "blog",
+        "article-grid",
+        "cream-and-green",
+        "saas"
+      ],
+      "techniques": [
+        "editorial-serif-display",
+        "whole-card-link",
+        "inset-image-tile"
+      ],
+      "stack": [
+        "webflow",
+        "gsap",
+        "scrolltrigger",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-blog-blog-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-blog-hero-01",
+      "name": "Evergrid Blog Hero 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-blog-hero-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-blog-hero-01",
+      "kind": "hero",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Blog landing hero: centred serif title and intro, then one wide featured-post card with the image on the left and title, excerpt and bottom-pinned date on the right.",
+      "tags": [
+        "blog",
+        "featured-post",
+        "hero",
+        "cream-and-green",
+        "saas"
+      ],
+      "techniques": [
+        "editorial-serif-display",
+        "featured-card",
+        "whole-card-link"
+      ],
+      "stack": [
+        "webflow",
+        "gsap",
+        "scrolltrigger",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-blog-hero-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-case-studies-use-cases-01",
+      "name": "Evergrid Case Studies Use Cases 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-case-studies-use-cases-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-case-studies-use-cases-01",
+      "kind": "use-cases",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "mixed",
+      "summary": "Case-study index: centred serif headline over a three-column grid of tall full-bleed photo cards with client logo and title at the top and a named contact plus round arrow at the bottom.",
+      "tags": [
+        "case-studies",
+        "customer-stories",
+        "photo-cards",
+        "saas",
+        "cream-and-green"
+      ],
+      "techniques": [
+        "full-bleed-image-cards",
+        "editorial-serif-display",
+        "whole-card-link",
+        "logo-cloud"
+      ],
+      "stack": [
+        "webflow",
+        "gsap",
+        "scrolltrigger",
+        "css"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/evergrid-case-studies-use-cases-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-contact-contact-01",
+      "name": "Evergrid Contact Contact 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-contact-contact-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-contact-contact-01",
+      "kind": "contact",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "mixed",
+      "summary": "Contact page block: a large rounded deep-green panel on cream holding a tag pill, serif title and a white form card with cream fields and a full-width pill submit.",
+      "tags": [
+        "contact",
+        "lead-form",
+        "saas",
+        "dark-green",
+        "cream-and-green"
+      ],
+      "techniques": [
+        "form-with-validation",
+        "editorial-serif-display",
+        "inset-panel",
+        "pill-button-with-arrow-chip"
+      ],
+      "stack": [
+        "webflow",
+        "gsap",
+        "scrolltrigger",
+        "css"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/evergrid-contact-contact-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-home-cta-01",
+      "name": "Evergrid Home CTA 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-home-cta-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-home-cta-01",
+      "kind": "cta",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "Closing call to action over a full-bleed aerial photo that fades from the cream page at the top into deep green at the bottom, with centred serif headline, line of copy and one light button.",
+      "tags": [
+        "cta",
+        "closing-section",
+        "photo-background",
+        "saas",
+        "dark-green"
+      ],
+      "techniques": [
+        "photo-background-with-tint",
+        "gradient-blend-into-footer",
+        "editorial-serif-display",
+        "single-action-cta"
+      ],
+      "stack": [
+        "webflow",
+        "gsap",
+        "scrolltrigger",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-home-cta-01.md",
       "patterns": [],
       "has_original": false
     },
@@ -172,8 +444,7 @@
       "techniques": [
         "accordion",
         "editorial-serif-display",
-        "fade-in-on-scroll",
-        "text-roll-button"
+        "pill-button-with-arrow-chip"
       ],
       "stack": [
         "webflow",
@@ -187,6 +458,41 @@
       "has_original": false
     },
     {
+      "id": "oversight-supply/evergrid-home-features-01",
+      "name": "Evergrid Home Features 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-home-features-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-home-features-01",
+      "kind": "features",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Problem-statement feature block: left column with serif heading, three icon-led pain points and a closing line; right side a staggered three-row collage of rounded photos and one text tile.",
+      "tags": [
+        "saas",
+        "problem-statement",
+        "collage",
+        "cream-and-green",
+        "features"
+      ],
+      "techniques": [
+        "image-collage",
+        "bento-grid",
+        "editorial-serif-display",
+        "lead-term-list"
+      ],
+      "stack": [
+        "webflow",
+        "gsap",
+        "scrolltrigger",
+        "css"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/evergrid-home-features-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
       "id": "oversight-supply/evergrid-home-features-02",
       "name": "Evergrid Home - Features 02",
       "source": "oversight-supply",
@@ -196,7 +502,7 @@
       "origin": "Evergrid template",
       "access": "free-with-account",
       "theme": "light",
-      "summary": "Alternating two-column feature rows on cream: a square photo tile with a frosted UI graphic that fades in, opposite a serif heading, short paragraph and three green-check bullets.",
+      "summary": "Alternating two-column feature rows on cream: a square photo tile with a frosted chart card floating on it, opposite a serif heading, muted paragraph and three green-check bullets.",
       "tags": [
         "saas",
         "zigzag",
@@ -207,7 +513,6 @@
       "techniques": [
         "alternating-feature-rows",
         "glassmorphism",
-        "text-reveal-on-scroll",
         "editorial-serif-display"
       ],
       "stack": [
@@ -229,19 +534,19 @@
       "origin": "Evergrid template",
       "access": "free-with-account",
       "theme": "dark",
-      "summary": "Dark forest-green footer with a newsletter sign-up and social icons on the left, four link columns on the right, and a hairline-divided credits bar, all on a tall photo-backed panel.",
+      "summary": "Closing block on one dark-green surface: an aerial photo band with a centred serif headline and button that fades down into a quiet footer of logo plus three link columns.",
       "tags": [
         "saas",
         "footer",
-        "newsletter",
+        "cta-band",
         "link-columns",
-        "dark"
+        "dark",
+        "photography"
       ],
       "techniques": [
         "footer-link-columns",
-        "newsletter-inline-form",
-        "underline-slide-hover",
-        "form-with-validation"
+        "photo-fade-into-footer",
+        "editorial-serif-display"
       ],
       "stack": [
         "webflow",
@@ -262,7 +567,7 @@
       "origin": "Evergrid template",
       "access": "free-with-account",
       "theme": "light",
-      "summary": "Centred serif-headline SaaS hero on cream: star row, status pill, headline, one pill CTA, then a wide photo panel holding a frosted dashboard shot beside a vertically cycling stack of stat cards.",
+      "summary": "Centred serif-headline SaaS hero on cream: star row, status pill, two-line headline, one pill CTA, then a wide photo panel holding a frosted-framed dashboard shot beside a tall stat card.",
       "tags": [
         "saas",
         "centred-hero",
@@ -273,15 +578,12 @@
       "techniques": [
         "editorial-serif-display",
         "glassmorphism",
-        "vertical-card-ticker",
         "stat-counters",
-        "text-swap-button",
-        "load-in-sequence"
+        "pill-navbar"
       ],
       "stack": [
         "webflow",
-        "css",
-        "gsap"
+        "css"
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/evergrid-home-hero-01.md",
@@ -298,7 +600,7 @@
       "origin": "Evergrid template",
       "access": "free-with-account",
       "theme": "light",
-      "summary": "A floating cream pill navbar: logo left, a row of text links with sliding underlines and a primary CTA right, collapsing to a hamburger drawer at tablet width.",
+      "summary": "A floating cream pill navbar: leaf logo and wordmark on the left, four plain text links on the right, the current page in a heavier weight. No button, no dropdowns in the still.",
       "tags": [
         "saas",
         "pill-navbar",
@@ -307,14 +609,11 @@
       ],
       "techniques": [
         "sticky-nav",
-        "pill-navbar",
-        "underline-slide-hover",
-        "text-swap-button"
+        "pill-navbar"
       ],
       "stack": [
         "webflow",
-        "css",
-        "gsap"
+        "css"
       ],
       "complexity": "low",
       "path": "sources/oversight-supply/sections/evergrid-home-navigation-01.md",
@@ -331,7 +630,7 @@
       "origin": "Evergrid template",
       "access": "free-with-account",
       "theme": "dark",
-      "summary": "Full-bleed image wall on dark green: three rows of rounded landscape photos, offset like brickwork, with a centre tile carrying a serif statement; rows are driven by a scroll-linked interaction.",
+      "summary": "Image wall on dark green: three rows of rounded landscape photos with staggered seams and edge-cropped tiles, and a large washed centre tile carrying a two-line serif statement.",
       "tags": [
         "image-wall",
         "statement",
@@ -341,7 +640,6 @@
       ],
       "techniques": [
         "image-collage",
-        "scroll-scrubbed-animation",
         "offset-rows",
         "editorial-serif-display"
       ],
@@ -364,20 +662,18 @@
       "origin": "Evergrid template",
       "access": "free-with-account",
       "theme": "light",
-      "summary": "Left-aligned section header above three tall photo cards; each card is one link with a client logo, serif headline, named person and a circular arrow, rising in with a blur on scroll.",
+      "summary": "Left-aligned serif title and intro above three tall photo cards; each card carries a client logo, a serif outcome headline, a named person and a white circular arrow button.",
       "tags": [
         "saas",
         "case-studies",
         "photo-cards",
-        "cms-list",
-        "serif-headline"
+        "serif-headline",
+        "social-proof"
       ],
       "techniques": [
         "photo-card-grid",
-        "text-reveal-on-scroll",
-        "blur-rise-reveal",
-        "editorial-serif-display",
-        "whole-card-link"
+        "whole-card-link",
+        "editorial-serif-display"
       ],
       "stack": [
         "webflow",
@@ -409,9 +705,7 @@
       "techniques": [
         "pricing-cards",
         "grouped-feature-lists",
-        "mono-label-accents",
-        "text-swap-button",
-        "load-in-sequence",
+        "uppercase-micro-labels",
         "editorial-serif-display"
       ],
       "stack": [
@@ -465,6 +759,148 @@
       ],
       "complexity": "medium",
       "path": "sources/oversight-supply/sections/florilegium.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/herbarium",
+      "name": "Herbarium",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/herbarium",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=herbarium",
+      "kind": "scroll-story",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "mixed",
+      "summary": "A desk of twelve throwable, flippable specimen cards that scroll sorts from a loose pile into a tidy index grid, then zooms one card to a full-bleed closing image.",
+      "tags": [
+        "botanical",
+        "collage",
+        "archive",
+        "interactive",
+        "tactile",
+        "editorial",
+        "playful"
+      ],
+      "techniques": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "draggable-elements",
+        "throw-physics",
+        "pile-to-grid-sort",
+        "card-flip",
+        "card-to-fullscreen-expand",
+        "image-collage",
+        "smooth-scroll",
+        "editorial-serif-display",
+        "mono-label-accents",
+        "grain-texture"
+      ],
+      "stack": [
+        "react",
+        "gsap",
+        "scrolltrigger",
+        "lenis",
+        "css"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/herbarium.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/joiner",
+      "name": "Joiner",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/joiner",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=joiner",
+      "kind": "scroll-story",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "mixed",
+      "summary": "One photograph shown as a photo-joiner collage of dozens of misregistered prints that react to the pointer and can be re-shot by clicking; scroll aligns them into a seamless image that fills the screen.",
+      "tags": [
+        "photography",
+        "collage",
+        "interactive",
+        "editorial",
+        "analog",
+        "landscape",
+        "tactile"
+      ],
+      "techniques": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "image-collage",
+        "fragmented-image-assembly",
+        "seeded-procedural-layout",
+        "pointer-tracking",
+        "parallax-layers",
+        "card-to-fullscreen-expand",
+        "smooth-scroll",
+        "editorial-serif-display",
+        "mono-label-accents",
+        "grain-texture"
+      ],
+      "stack": [
+        "react",
+        "gsap",
+        "scrolltrigger",
+        "lenis",
+        "css",
+        "canvas"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/joiner.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/phototropism",
+      "name": "Phototropism",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/phototropism",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=phototropism",
+      "kind": "scroll-story",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "mixed",
+      "summary": "A line-drawn canvas meadow whose stems, grass and even the headline letters lean toward the cursor-as-sun; click to plant, and scroll runs the day from cream morning through dusk to a firefly night.",
+      "tags": [
+        "botanical",
+        "generative",
+        "illustrative",
+        "interactive",
+        "day-night",
+        "playful",
+        "line-art"
+      ],
+      "techniques": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "canvas-2d-procedural-drawing",
+        "pointer-tracking",
+        "pointer-as-light-source",
+        "day-night-palette-interpolation",
+        "per-letter-pointer-lean",
+        "split-text-animation",
+        "canvas-2d-particles",
+        "seeded-procedural-layout",
+        "smooth-scroll",
+        "editorial-serif-display",
+        "mono-label-accents",
+        "grain-texture"
+      ],
+      "stack": [
+        "react",
+        "gsap",
+        "scrolltrigger",
+        "lenis",
+        "canvas",
+        "css"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/phototropism.md",
       "patterns": [],
       "has_original": false
     }

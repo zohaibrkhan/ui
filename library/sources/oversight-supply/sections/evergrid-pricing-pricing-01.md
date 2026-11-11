@@ -10,49 +10,45 @@ access: "free-with-account"
 theme: "mixed"
 summary: "Three equal dark-green plan cards on cream under a centred serif headline: name, blurb, big price, white pill CTA and two labelled check-lists, with a recommended tag and a full-width help strip below."
 tags: ["saas", "pricing", "three-tier", "plan-cards", "dark-cards"]
-techniques: ["pricing-cards", "grouped-feature-lists", "mono-label-accents", "text-swap-button", "load-in-sequence", "editorial-serif-display"]
+techniques: ["pricing-cards", "grouped-feature-lists", "uppercase-micro-labels", "editorial-serif-display"]
 stack: ["webflow", "css"]
 complexity: "low"
 ---
 
 # Evergrid Pricing - Pricing 01
 
-> **Evidence note.** This section is a Webflow export. Its stylesheet, scripts, fonts and images load from a CDN our sandbox could not reach, so the live preview rendered unstyled. This entry is based on the public preview's DOM (structure, class roles, inline initial animation states) and the vendor's public thumbnail (a 2050px-wide still, colours sampled from it). Hover/click states and the 390px layout were not rendered; anything marked *inferred* follows from markup only.
-
 ## What it is
 
-A straightforward three-tier pricing page top: headline, three plan cards, and a "not sure?" strip. It suits products with flat monthly plans. There is **no billing toggle** in this section - prices are fixed per month - and its strength is the card anatomy, where every tier has identical slots so plans compare line by line.
+A straightforward three-tier pricing block: headline, three plan cards and a "not sure?" strip. It suits products with flat monthly plans. The still shows no billing toggle - prices are per month only - and the strength is the card anatomy, where every tier has identical slots so plans compare line by line. This entry is based on the vendor's static public thumbnail (a 2050px-wide still); the live preview was unavailable to us, so sizes are proportions of that image and colours are sampled from a screenshot.
 
 ## Layout anatomy
 
-- **Header:** centred `h1` on two lines and a two-line paragraph, constrained to roughly half the container.
-- **Recommended tag:** a small pill with an accent dot, centred above the middle card and sitting in the gap between header and grid.
-- **Grid:** three equal columns, gap about 2% of grid width (roughly 20-24px). Cards are equal height.
-- **Card anatomy, top to bottom** (padding about 8% of card width):
-  1. Plan name, then a one- or two-line description.
-  2. Price row: large figure with a small "per month" caption baseline-aligned to its right.
-  3. Full-width white pill button.
-  4. List group A: small uppercase label, hairline rule, three check rows.
+- **Header:** centred two-line headline (about 50% of panel width) and a two-line paragraph (about 37%).
+- **Recommended tag:** a small pill with an accent dot, centred above the middle card in the gap between header and grid.
+- **Grid:** three equal cards, each about 29.5% of the panel width, gap about 1.8% (roughly 21px); side margins about 4%. Cards are equal height, ratio about 3:5.
+- **Card anatomy, top to bottom** (inner padding about 8% of card width):
+  1. Plan name, then a two-line description.
+  2. Price row: large figure with a small "per month" caption on its baseline.
+  3. Full-width white pill button, about 40px tall.
+  4. List group A: tiny uppercase label, hairline rule, three check rows.
   5. List group B: same structure, four check rows.
-  Row spacing in lists is about 2x the text size; the gap between groups is about 3x.
-- **Help strip:** a full-grid-width dark bar beneath the cards with overlapping avatar circles on the left, a bold question and a muted sentence, and a circular arrow button at the far right.
-- 390px layout not observed; the grid is a standard Webflow grid and is expected to drop to one column.
+  Check rows are about 30px apart; groups about 45px apart.
+- **Help strip:** a full-grid-width dark bar about 85px tall, about 24px below the cards: three overlapping avatar circles, a bold question with a muted sentence under it, and a white circular arrow button at the far right.
+- 390px layout and any toggle behaviour: not determined (live preview unavailable).
 
 ## Visual system
 
-- **Type:** headline in Lora serif, deep green, about 48px equivalent; everything in the cards is a neutral sans (family not determined): plan name about 18px medium, description about 13px, price about 40px semi-bold, list labels about 9-10px uppercase with wide tracking, list rows about 12-13px.
-- **Colour:** page cream `#f5f4eb`; cards and strip deep green `#234839`; in-card rule `#345648`; card text white, secondary text a grey-green tint; button white `#ffffff` with dark label; tag pill tan `#e3dfcc` with accent dot `#3ec41e`.
-- **Shape and depth:** card radius about 8-10px (tighter than the template's image tiles); pill buttons fully rounded; thin check glyphs rather than badges; no shadows.
+- **Type:** headline in a serif (reads as Lora), deep green, about 46-48px equivalent; card content in a neutral sans (family not determined): plan name about 18px medium, description about 13px, price about 40px semi-bold, list labels about 9px uppercase with wide tracking, rows about 12-13px.
+- **Colour (sampled from a screenshot):** page cream `#f5f4eb`; cards and strip deep green `#234839`; in-card rule `#345648`; text white with grey-green secondary; button `#ffffff` with dark label; tag pill tan `#e3dfcc` with accent dot `#3ec41e`.
+- **Shape and depth:** card radius about 8-10px (tighter than the template's image tiles); buttons fully rounded; thin check glyphs, not badges; no shadows. All three tiers are styled identically - only the tag marks the recommended one.
 
 ## Motion and interaction
 
-- Header and each card are wrapped for a load-in reveal (cards appear in sequence after the heading; timing not determined).
-- CTA hover: duplicated label for a vertical text swap plus an expanding overlay behind the arrow holders (this is the template's "fancy button" in its white variant).
-- All three tiers are styled identically; the recommended plan is signalled only by the tag. Reduced-motion handling: not determined.
+Not determined (live preview unavailable). The thumbnail is a still, so no load, scroll, hover or focus behaviour was seen. One observed fact: the template is a Webflow build that loads GSAP 3 with ScrollTrigger and SplitText, so scroll-reveal and split-text motion are plausible, but we did not see them run. Reduced-motion handling: not determined.
 
 ## Techniques worth reusing
 
-- **Slot-aligned cards** - same number of list groups and the same labels in every card so rows line up across tiers without a table.
+- **Slot-aligned cards** - same list groups and labels in every card so rows line up across tiers without a table.
 - **Uppercase micro-labels over a hairline** - gives long feature lists structure at very small cost. See `../../../patterns/evergrid-design-system.md`.
 - **Help strip under the grid** - catches undecided visitors with a human route instead of a fourth "enterprise" card.
 
@@ -93,4 +89,4 @@ lists, 4.5:1 contrast for muted text on the dark surface. Performance: no images
 
 ## Adaptation notes
 
-The source differentiates the recommended tier only with a floating tag; add a lighter surface or an outline if you need a stronger nudge. Muted text on the dark green is small - raise it to 13px minimum. If plans differ in list length, pad with "not included" rows instead of letting cards end at different heights. Add the billing switch only when annual pricing really exists.
+The source differentiates the recommended tier only with a floating tag; add a lighter surface or outline for a stronger nudge. Secondary text on the dark green is very small - use 13px minimum and check contrast. If plans differ in list length, pad with "not included" rows. The billing switch in the brief is optional and is our addition; the still has none.

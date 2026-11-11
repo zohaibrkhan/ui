@@ -10,7 +10,7 @@ access: "free-with-account"
 theme: "light"
 summary: "Numbered three-step story: portrait image left, text and checklist right, joined by a centre rail whose dark fill tracks scroll past numbered nodes."
 tags: ["saas", "about", "numbered-steps", "cream-and-green", "editorial"]
-techniques: ["timeline-steps", "scroll-scrubbed-animation", "sticky-progress-line", "editorial-serif-display", "fade-in-on-scroll", "text-roll-button"]
+techniques: ["timeline-steps", "progress-rail", "editorial-serif-display", "pill-button-with-arrow-chip"]
 stack: ["webflow", "gsap", "scrolltrigger", "css"]
 complexity: "medium"
 ---
@@ -21,17 +21,17 @@ complexity: "medium"
 
 An about-page feature sequence that tells a three-part story (purpose, method, result). Each step is a row with a tall image on one side and a heading, paragraph, three-point checklist and button on the other. A vertical rail runs down the middle with a numbered disc per step, turning three ordinary alternating rows into one continuous timeline.
 
-> Evidence basis: the catalogue thumbnail (a desktop render) plus the DOM of the public preview. The template stylesheet, fonts and scripts sit on a third-party CDN that was unreachable from the analysis environment, so the preview rendered unstyled: hover, scroll and sub-desktop behaviour below are inferred from markup and marked as such, and pixel values are estimates from the thumbnail.
+> Evidence basis: this entry is based on a single static public thumbnail (a desktop render); the live preview was unavailable. Colour values are sampled from that screenshot and sizes are estimates or proportions, not measured CSS.
 
 ## Layout anatomy
 
-- A relatively-positioned wrapper holds three step grids stacked vertically, plus one absolutely-positioned rail element that spans the full wrapper height at the horizontal centre.
-- Each step grid has three tracks: image (about 40% of the container), a narrow rail column holding the numbered disc (about 8%), and content (about 32%, with empty margin beyond). In the thumbnail every step keeps the image on the left; the rows do not alternate.
+- Steps are stacked vertically (step 1 and the top of step 2 are visible in the thumbnail), and a continuous vertical rail runs through all of them at the horizontal centre of the image-plus-text block.
+- Each step has three tracks: image (about 40% of the container), a narrow rail column holding the numbered disc (about 8%), and content (about 32%, with empty margin beyond). In the thumbnail every step keeps the image on the left; the rows do not alternate.
 - Image: portrait, about 4:5, rounded corners. The content column starts slightly lower than the image top, so the heading aligns just below the disc.
 - Content order: h2/h3 in serif (two to three lines), muted paragraph, a gap, three checklist lines each with a small green tick disc, a gap, pill button.
 - Steps are separated by roughly 150px of air at desktop, so step 2 begins while step 1's image is still leaving the viewport.
-- The rail has two layers: a light grey track the full height and a near-black fill. In the thumbnail the fill runs from disc 1 to about 40% of the first step, consistent with a fill that grows with scroll. The active disc is larger and darker; upcoming discs are smaller and lighter.
-- Mobile: not determined.
+- The rail has two layers: a light grey track the full height and a near-black fill. In the thumbnail the fill runs from disc 1 to about 40% of the first step, which looks like a progress fill, though whether it is scroll-linked was not determined (live preview unavailable). The active disc is larger and darker; upcoming discs are smaller and lighter.
+- Tablet and mobile reflow: not determined (live preview unavailable).
 
 ## Visual system
 
@@ -41,10 +41,7 @@ An about-page feature sequence that tells a three-part story (purpose, method, r
 
 ## Motion and interaction
 
-- The first step's pieces are wrapped in load-reveal containers and later steps in scroll-reveal containers, with a delayed variant for text so the image leads and the copy follows.
-- The class names on the wrapper and rail (sticky wrapper, centre line) and the two-layer rail indicate a scroll-linked fill, most likely a ScrollTrigger scrub scaling the dark layer from the top. Whether the rail or the discs are position: sticky was not determined.
-- Button hover: label roll with arrow chip swap (shared template button, inferred from duplicated label markup).
-- Reduced motion: not determined.
+Not determined (live preview unavailable). The only related fact observed is that the template is a Webflow build whose page loads GSAP 3 with ScrollTrigger and SplitText, so scroll-reveal and split-text motion is plausible, but none of it was seen running. Hover, focus, open/close and reduced-motion behaviour were not observed.
 
 ## Techniques worth reusing
 
@@ -81,4 +78,4 @@ listeners without passive: true.
 
 ## Adaptation notes
 
-Good for process, mission/values or onboarding narratives of three to five steps; beyond that the rail gets long and the pattern becomes a chore. Decide early whether rows alternate: this one does not, which keeps the rail honest and the reading path a straight line. The checklist text in the thumbnail is small (about 13px); raise it to at least 15px. Do not hide step content behind the scroll animation: every step should be readable with JS disabled.
+Good for process, mission/values or onboarding narratives of three to five steps; beyond that the rail gets long and the pattern becomes a chore. Decide early whether rows alternate: in the visible part of this one they do not, which keeps the rail honest and the reading path a straight line. The checklist text in the thumbnail is small (about 13px); raise it to at least 15px. Do not hide step content behind the scroll animation: every step should be readable with JS disabled.
