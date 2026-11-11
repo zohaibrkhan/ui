@@ -87,3 +87,4 @@ parsing those tools would share.
 | Tool | Use it for |
 | --- | --- |
 | [Refero Styles](tools/refero-styles.md) | Picking a visual direction by reference and getting it as a DESIGN.md |
+| [Subframe Motion](tools/subframe-motion.md) | Working React motion examples and motion-design guidance, queried through its MCP server |
