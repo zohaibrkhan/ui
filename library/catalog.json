@@ -1,7 +1,7 @@
 {
   "version": 1,
   "counts": {
-    "entries": 0,
+    "entries": 8,
     "patterns": 0,
     "tools": 1
   },
@@ -13,5 +13,308 @@
       "path": "tools/refero-styles.md"
     }
   ],
-  "entries": []
+  "entries": [
+    {
+      "id": "oversight-supply/condensation",
+      "name": "Condensation",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/condensation",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=condensation",
+      "kind": "scroll-story",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "A fogged greenhouse window you wipe clear with the pointer; scrolling drags a squeegee down the glass, then pushes through the frame into the sharp photo behind it.",
+      "tags": [
+        "botanical",
+        "photographic",
+        "interactive",
+        "atmospheric",
+        "webgl",
+        "editorial",
+        "tactile"
+      ],
+      "techniques": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "webgl-shader-background",
+        "pointer-tracking",
+        "wipe-to-reveal-mask",
+        "procedural-water-drops",
+        "smooth-scroll",
+        "editorial-serif-display",
+        "mono-label-accents",
+        "glassmorphism",
+        "split-text-animation"
+      ],
+      "stack": [
+        "react",
+        "gsap",
+        "scrolltrigger",
+        "lenis",
+        "webgl2",
+        "glsl",
+        "canvas",
+        "css"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/condensation.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/cyanotype",
+      "name": "Cyanotype",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/cyanotype",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=cyanotype",
+      "kind": "scroll-story",
+      "origin": "Studio Original",
+      "access": "free-with-account",
+      "theme": "mixed",
+      "summary": "A pinned sun-print workbench: drag plant cuttings onto coated paper, hold a button to expose it on a 2D canvas, then scroll to rinse the print blue and hang it on a dark wall.",
+      "tags": [
+        "botanical",
+        "interactive",
+        "craft",
+        "editorial",
+        "print-making",
+        "tactile",
+        "playful"
+      ],
+      "techniques": [
+        "scroll-pinned-story",
+        "scroll-scrubbed-animation",
+        "canvas-2d-compositing",
+        "draggable-elements",
+        "press-and-hold-control",
+        "user-generated-artifact",
+        "smooth-scroll",
+        "editorial-serif-display",
+        "mono-label-accents",
+        "grain-texture",
+        "split-text-animation"
+      ],
+      "stack": [
+        "react",
+        "gsap",
+        "scrolltrigger",
+        "lenis",
+        "canvas",
+        "svg",
+        "css"
+      ],
+      "complexity": "high",
+      "path": "sources/oversight-supply/sections/cyanotype.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-about-us-features-01",
+      "name": "Evergrid About Us Features 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-about-us-features-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-about-us-features-01",
+      "kind": "features",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Numbered three-step story: portrait image left, text and checklist right, joined by a centre rail whose dark fill tracks scroll past numbered nodes.",
+      "tags": [
+        "saas",
+        "about",
+        "numbered-steps",
+        "cream-and-green",
+        "editorial"
+      ],
+      "techniques": [
+        "timeline-steps",
+        "scroll-scrubbed-animation",
+        "sticky-progress-line",
+        "editorial-serif-display",
+        "fade-in-on-scroll",
+        "text-roll-button"
+      ],
+      "stack": [
+        "webflow",
+        "gsap",
+        "scrolltrigger",
+        "css"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/evergrid-about-us-features-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-home-faq-01",
+      "name": "Evergrid Home FAQ 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-home-faq-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-home-faq-01",
+      "kind": "faq",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Cream-panel FAQ: left-aligned serif heading, a stack of white full-width question bars with plus icons, and a closing contact row with a pill button.",
+      "tags": [
+        "saas",
+        "calm",
+        "cream-and-green",
+        "faq",
+        "support"
+      ],
+      "techniques": [
+        "accordion",
+        "editorial-serif-display",
+        "fade-in-on-scroll",
+        "text-roll-button"
+      ],
+      "stack": [
+        "webflow",
+        "gsap",
+        "scrolltrigger",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-home-faq-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-home-features-02",
+      "name": "Evergrid Home - Features 02",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-home-features-02",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-home-features-02",
+      "kind": "features",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Alternating two-column feature rows on cream: a square photo tile with a frosted UI graphic that fades in, opposite a serif heading, short paragraph and three green-check bullets.",
+      "tags": [
+        "saas",
+        "zigzag",
+        "feature-rows",
+        "glass-card",
+        "checklist"
+      ],
+      "techniques": [
+        "alternating-feature-rows",
+        "glassmorphism",
+        "text-reveal-on-scroll",
+        "editorial-serif-display"
+      ],
+      "stack": [
+        "webflow",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-home-features-02.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-home-footer-01",
+      "name": "Evergrid Home - Footer 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-home-footer-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-home-footer-01",
+      "kind": "footer",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "dark",
+      "summary": "Dark forest-green footer with a newsletter sign-up and social icons on the left, four link columns on the right, and a hairline-divided credits bar, all on a tall photo-backed panel.",
+      "tags": [
+        "saas",
+        "footer",
+        "newsletter",
+        "link-columns",
+        "dark"
+      ],
+      "techniques": [
+        "footer-link-columns",
+        "newsletter-inline-form",
+        "underline-slide-hover",
+        "form-with-validation"
+      ],
+      "stack": [
+        "webflow",
+        "css"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-home-footer-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-home-hero-01",
+      "name": "Evergrid Home - Hero 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-home-hero-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-home-hero-01",
+      "kind": "hero",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "Centred serif-headline SaaS hero on cream: star row, status pill, headline, one pill CTA, then a wide photo panel holding a frosted dashboard shot beside a vertically cycling stack of stat cards.",
+      "tags": [
+        "saas",
+        "centred-hero",
+        "dashboard-mockup",
+        "serif-headline",
+        "sustainability"
+      ],
+      "techniques": [
+        "editorial-serif-display",
+        "glassmorphism",
+        "vertical-card-ticker",
+        "stat-counters",
+        "text-swap-button",
+        "load-in-sequence"
+      ],
+      "stack": [
+        "webflow",
+        "css",
+        "gsap"
+      ],
+      "complexity": "medium",
+      "path": "sources/oversight-supply/sections/evergrid-home-hero-01.md",
+      "patterns": [],
+      "has_original": false
+    },
+    {
+      "id": "oversight-supply/evergrid-home-navigation-01",
+      "name": "Evergrid Home - Navigation 01",
+      "source": "oversight-supply",
+      "source_url": "https://supply.madebyoversight.com/sections/evergrid-home-navigation-01",
+      "preview_url": "https://supply.madebyoversight.com/sections?preview=evergrid-home-navigation-01",
+      "kind": "navigation",
+      "origin": "Evergrid template",
+      "access": "free-with-account",
+      "theme": "light",
+      "summary": "A floating cream pill navbar: logo left, a row of text links with sliding underlines and a primary CTA right, collapsing to a hamburger drawer at tablet width.",
+      "tags": [
+        "saas",
+        "pill-navbar",
+        "minimal",
+        "webflow"
+      ],
+      "techniques": [
+        "sticky-nav",
+        "pill-navbar",
+        "underline-slide-hover",
+        "text-swap-button"
+      ],
+      "stack": [
+        "webflow",
+        "css",
+        "gsap"
+      ],
+      "complexity": "low",
+      "path": "sources/oversight-supply/sections/evergrid-home-navigation-01.md",
+      "patterns": [],
+      "has_original": false
+    }
+  ]
 }
